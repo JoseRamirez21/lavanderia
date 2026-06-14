@@ -1,0 +1,325 @@
+/* ═══════════════════════════════════════
+   ANIMATIONS.CSS — Scroll reveals y efectos
+   ═══════════════════════════════════════ */
+
+/* ─────────────────────────────
+   REVEAL AL HACER SCROLL
+───────────────────────────── */
+
+/* Fade up (default) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade desde la izquierda */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade desde la derecha */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Fade simple (sin movimiento) */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* Scale up */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ─────────────────────────────
+   STAGGER (hijos escalonados)
+───────────────────────────── */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays escalonados */
+.stagger.visible > *:nth-child(1)  { transition-delay: 0.05s; }
+.stagger.visible > *:nth-child(2)  { transition-delay: 0.13s; }
+.stagger.visible > *:nth-child(3)  { transition-delay: 0.21s; }
+.stagger.visible > *:nth-child(4)  { transition-delay: 0.29s; }
+.stagger.visible > *:nth-child(5)  { transition-delay: 0.37s; }
+.stagger.visible > *:nth-child(6)  { transition-delay: 0.45s; }
+.stagger.visible > *:nth-child(7)  { transition-delay: 0.53s; }
+.stagger.visible > *:nth-child(8)  { transition-delay: 0.61s; }
+
+/* ─────────────────────────────
+   ANIMACIONES DE HÉROE
+   (disparan al cargar, sin JS)
+───────────────────────────── */
+.hero-anim-1 {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hero-fade-up 0.7s 0.2s ease forwards;
+}
+
+.hero-anim-2 {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hero-fade-up 0.7s 0.4s ease forwards;
+}
+
+.hero-anim-3 {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hero-fade-up 0.7s 0.6s ease forwards;
+}
+
+.hero-anim-4 {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hero-fade-up 0.7s 0.8s ease forwards;
+}
+
+.hero-anim-5 {
+  opacity: 0;
+  transform: translateY(22px);
+  animation: hero-fade-up 0.7s 1s ease forwards;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─────────────────────────────
+   FLOATING (burbuja suave)
+───────────────────────────── */
+.float {
+  animation: float-anim 4s ease-in-out infinite;
+}
+
+@keyframes float-anim {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+/* ─────────────────────────────
+   SPIN LENTO
+───────────────────────────── */
+.spin-slow {
+  animation: spin-anim 18s linear infinite;
+}
+
+@keyframes spin-anim {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─────────────────────────────
+   PULSE (para badges o CTAs)
+───────────────────────────── */
+.pulse {
+  animation: pulse-anim 2.2s ease-in-out infinite;
+}
+
+@keyframes pulse-anim {
+  0%, 100% { box-shadow: 0 0 0 0 var(--azul-glow); }
+  50%       { box-shadow: 0 0 0 10px transparent; }
+}
+
+/* ─────────────────────────────
+   SCROLL HINT (flecha en hero)
+───────────────────────────── */
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(15, 28, 53, 0.3);
+}
+
+.scroll-line {
+  width: 1.5px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--azul), transparent);
+  animation: scroll-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* ─────────────────────────────
+   TESTIMONIOS TRACK (autoplay)
+───────────────────────────── */
+.testi-track-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.testi-track-wrap::before,
+.testi-track-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.testi-track-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--blanco), transparent);
+}
+
+.testi-track-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--blanco), transparent);
+}
+
+.testi-track {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1rem 0.5rem;
+  animation: testi-scroll 30s linear infinite;
+  width: max-content;
+}
+
+.testi-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes testi-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─────────────────────────────
+   MARCAS TRACK (autoplay)
+───────────────────────────── */
+.marcas-track-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.marcas-track-wrap::before,
+.marcas-track-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marcas-track-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--gris-fondo), transparent);
+}
+
+.marcas-track-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--gris-fondo), transparent);
+}
+
+.marcas-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  animation: marcas-scroll 22s linear infinite;
+  width: max-content;
+}
+
+.marcas-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marcas-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ─────────────────────────────
+   REDUCED MOTION
+───────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-left,
+  .reveal-right,
+  .reveal-fade,
+  .reveal-scale {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-anim-1,
+  .hero-anim-2,
+  .hero-anim-3,
+  .hero-anim-4,
+  .hero-anim-5 {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  .testi-track,
+  .marcas-track,
+  .scroll-line,
+  .float,
+  .spin-slow,
+  .pulse {
+    animation: none !important;
+  }
+}

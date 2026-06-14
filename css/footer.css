@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════
+   FOOTER.CSS — Pie de página
+   ═══════════════════════════════════════ */
+
+footer {
+  background: var(--negro-texto);
+  color: rgba(255, 255, 255, 0.65);
+  padding: 4rem 0 0;
+}
+
+/* ─── Grid principal ─── */
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ─── Columna de marca ─── */
+.footer-brand {}
+
+.footer-logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: var(--blanco);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+  display: block;
+  text-decoration: none;
+}
+
+.footer-logo span {
+  color: var(--azul-claro);
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.45);
+  max-width: 260px;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Redes sociales ─── */
+.footer-social {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.social-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--trans-fast);
+  cursor: pointer;
+}
+
+.social-btn:hover {
+  background: var(--azul);
+  border-color: var(--azul);
+  transform: translateY(-2px);
+}
+
+/* ─── Columnas de links ─── */
+.footer-col-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.footer-links a {
+  font-size: 0.87rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: none;
+  transition: var(--trans-fast);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.footer-links a:hover {
+  color: var(--blanco);
+  padding-left: 4px;
+}
+
+/* ─── Link destacado ─── */
+.footer-links a.highlight {
+  color: var(--azul-claro);
+}
+
+.footer-links a.highlight:hover {
+  color: var(--blanco);
+}
+
+/* ─── Footer bottom ─── */
+.footer-bottom {
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: none;
+  transition: var(--trans-fast);
+}
+
+.footer-bottom a:hover {
+  color: var(--blanco);
+}
+
+.footer-bottom-sep {
+  color: rgba(255, 255, 255, 0.12);
+  margin: 0 0.4rem;
+}
+
+/* ─── Banda de medios de pago ─── */
+.footer-payments {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.payment-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3px 10px;
+  border-radius: var(--radius-pill);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-desc {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 3rem 0 0;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

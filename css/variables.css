@@ -1,0 +1,70 @@
+/* ═══════════════════════════════════════
+   VARIABLES.CSS — Lavandería X
+   Paleta fresca: azul cielo + blanco + acento lima
+   ═══════════════════════════════════════ */
+
+:root {
+  /* ─── Colores principales ─── */
+  --azul:          #2B7FD4;
+  --azul-oscuro:   #1A5FA3;
+  --azul-claro:    #5BA3E8;
+  --azul-glow:     rgba(43, 127, 212, 0.25);
+  --azul-suave:    rgba(43, 127, 212, 0.08);
+
+  /* ─── Acento ─── */
+  --lima:          #4CC97A;
+  --lima-oscuro:   #38A862;
+  --lima-glow:     rgba(76, 201, 122, 0.25);
+
+  /* ─── Fondos ─── */
+  --blanco:        #FFFFFF;
+  --gris-fondo:    #F4F7FC;
+  --gris-suave:    #EAF0F9;
+  --gris-borde:    #DDE6F4;
+  --gris-texto:    #6B7A99;
+  --negro-texto:   #0F1C35;
+
+  /* ─── Glassmorphism ─── */
+  --glass-bg:      rgba(255, 255, 255, 0.75);
+  --glass-borde:   rgba(43, 127, 212, 0.15);
+
+  /* ─── WhatsApp ─── */
+  --verde-wa:      #25D366;
+
+  /* ─── Sombras ─── */
+  --sombra-sm:     0 2px 12px rgba(43, 127, 212, 0.08);
+  --sombra-md:     0 8px 30px rgba(43, 127, 212, 0.12);
+  --sombra-lg:     0 20px 60px rgba(43, 127, 212, 0.18);
+
+  /* ─── Tipografía ─── */
+  --font-display:  'Syne', sans-serif;
+  --font-body:     'DM Sans', sans-serif;
+
+  /* ─── Espaciado base ─── */
+  --gap-xs:   0.5rem;
+  --gap-sm:   1rem;
+  --gap-md:   2rem;
+  --gap-lg:   4rem;
+  --gap-xl:   6rem;
+
+  /* ─── Radios ─── */
+  --radius-sm:  8px;
+  --radius-md:  14px;
+  --radius-lg:  24px;
+  --radius-pill: 999px;
+
+  /* ─── Transiciones ─── */
+  --trans-fast:   all 0.2s ease;
+  --trans-mid:    all 0.35s ease;
+  --trans-slow:   all 0.6s ease;
+
+  /* ─── Contenedor ─── */
+  --max-width:    1160px;
+  --padding-x:    2rem;
+}
+
+/* ─── Breakpoints de referencia (usar en media queries) ───
+   Mobile:   < 600px
+   Tablet:   600px – 900px
+   Desktop:  > 900px
+─────────────────────────────────────────────────────── */

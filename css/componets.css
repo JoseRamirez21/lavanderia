@@ -1,0 +1,599 @@
+/* ═══════════════════════════════════════
+   COMPONENTS.CSS — Botones, cards, badges
+   ═══════════════════════════════════════ */
+
+/* ─────────────────────────────
+   BOTONES
+───────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--trans-fast);
+  white-space: nowrap;
+}
+
+/* Primario */
+.btn-primary {
+  background: var(--azul);
+  color: var(--blanco);
+  border-color: var(--azul);
+}
+
+.btn-primary:hover {
+  background: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--azul-glow);
+}
+
+/* Secundario / outline */
+.btn-outline {
+  background: transparent;
+  color: var(--azul);
+  border-color: var(--azul);
+}
+
+.btn-outline:hover {
+  background: var(--azul-suave);
+  transform: translateY(-2px);
+}
+
+/* Lima / acento */
+.btn-lima {
+  background: var(--lima);
+  color: var(--blanco);
+  border-color: var(--lima);
+}
+
+.btn-lima:hover {
+  background: var(--lima-oscuro);
+  border-color: var(--lima-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--lima-glow);
+}
+
+/* Blanco (sobre fondo azul) */
+.btn-white {
+  background: var(--blanco);
+  color: var(--azul);
+  border-color: var(--blanco);
+}
+
+.btn-white:hover {
+  background: var(--gris-fondo);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* Ghost blanco (sobre fondo azul) */
+.btn-ghost-white {
+  background: transparent;
+  color: var(--blanco);
+  border-color: rgba(255,255,255,0.5);
+}
+
+.btn-ghost-white:hover {
+  border-color: var(--blanco);
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* Tamaños */
+.btn-sm {
+  padding: 0.55rem 1.3rem;
+  font-size: 0.83rem;
+}
+
+.btn-lg {
+  padding: 1.1rem 2.8rem;
+  font-size: 1.05rem;
+}
+
+/* WhatsApp */
+.btn-wa {
+  background: var(--verde-wa);
+  color: var(--blanco);
+  border-color: var(--verde-wa);
+}
+
+.btn-wa:hover {
+  background: #1db954;
+  border-color: #1db954;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37,211,102,0.35);
+}
+
+/* ─────────────────────────────
+   BADGES / ETIQUETAS
+───────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.badge-azul {
+  background: var(--azul-suave);
+  color: var(--azul);
+  border: 1px solid rgba(43, 127, 212, 0.2);
+}
+
+.badge-lima {
+  background: rgba(76, 201, 122, 0.1);
+  color: var(--lima-oscuro);
+  border: 1px solid rgba(76, 201, 122, 0.2);
+}
+
+.badge-gris {
+  background: var(--gris-suave);
+  color: var(--gris-texto);
+  border: 1px solid var(--gris-borde);
+}
+
+.badge-solid-azul {
+  background: var(--azul);
+  color: var(--blanco);
+}
+
+.badge-solid-lima {
+  background: var(--lima);
+  color: var(--blanco);
+}
+
+/* ─────────────────────────────
+   CARDS GENERALES
+───────────────────────────── */
+.card {
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-md);
+  padding: var(--gap-md);
+  transition: var(--trans-mid);
+}
+
+.card:hover {
+  box-shadow: var(--sombra-md);
+  border-color: rgba(43, 127, 212, 0.2);
+  transform: translateY(-4px);
+}
+
+/* Card con fondo suave */
+.card-soft {
+  background: var(--gris-fondo);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-md);
+  padding: var(--gap-md);
+  transition: var(--trans-mid);
+}
+
+.card-soft:hover {
+  background: var(--blanco);
+  box-shadow: var(--sombra-md);
+  transform: translateY(-4px);
+}
+
+/* Card glass */
+.card-glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-borde);
+  border-radius: var(--radius-md);
+  padding: var(--gap-md);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  transition: var(--trans-mid);
+}
+
+.card-glass:hover {
+  box-shadow: var(--sombra-md);
+  transform: translateY(-4px);
+}
+
+/* ─────────────────────────────
+   CARD DE SERVICIO
+───────────────────────────── */
+.service-card {
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.8rem;
+  transition: var(--trans-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, var(--azul), var(--lima));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.service-card:hover::before {
+  transform: scaleX(1);
+}
+
+.service-card:hover {
+  box-shadow: var(--sombra-lg);
+  transform: translateY(-6px);
+  border-color: transparent;
+}
+
+.service-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-sm);
+  background: var(--azul-suave);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  transition: var(--trans-fast);
+}
+
+.service-card:hover .service-card-icon {
+  background: var(--azul);
+  transform: scale(1.05);
+}
+
+.service-card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--negro-texto);
+  margin-bottom: 0.6rem;
+}
+
+.service-card-text {
+  font-size: 0.9rem;
+  color: var(--gris-texto);
+  line-height: 1.7;
+}
+
+/* ─────────────────────────────
+   CARD DE PRECIO
+───────────────────────────── */
+.price-card {
+  background: var(--blanco);
+  border: 2px solid var(--gris-borde);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--trans-mid);
+  position: relative;
+}
+
+.price-card.featured {
+  border-color: var(--azul);
+  box-shadow: var(--sombra-lg);
+  transform: scale(1.03);
+}
+
+.price-card.featured::before {
+  content: 'Más popular';
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--azul);
+  color: var(--blanco);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 16px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.price-card:not(.featured):hover {
+  border-color: var(--azul);
+  box-shadow: var(--sombra-md);
+  transform: translateY(-4px);
+}
+
+.price-card-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.price-card-price {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--negro-texto);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.price-card-price sup {
+  font-size: 1.2rem;
+  font-weight: 600;
+  vertical-align: super;
+}
+
+.price-card-unit {
+  font-size: 0.8rem;
+  color: var(--gris-texto);
+  margin-bottom: 1.8rem;
+}
+
+.price-card-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.price-card-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--gris-texto);
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--gris-borde);
+}
+
+.price-card-features li:last-child {
+  border-bottom: none;
+}
+
+.price-card-features li::before {
+  content: '✓';
+  color: var(--lima);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ─────────────────────────────
+   CARD DE TESTIMONIO
+───────────────────────────── */
+.testi-card {
+  background: var(--blanco);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  transition: var(--trans-mid);
+  flex-shrink: 0;
+  width: 320px;
+}
+
+.testi-card:hover {
+  box-shadow: var(--sombra-md);
+  border-color: rgba(43, 127, 212, 0.25);
+  transform: translateY(-3px);
+}
+
+.testi-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--blanco);
+  flex-shrink: 0;
+}
+
+.testi-author {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--negro-texto);
+}
+
+.testi-loc {
+  font-size: 0.75rem;
+  color: var(--gris-texto);
+  margin-top: 1px;
+}
+
+.testi-stars {
+  color: #F5A623;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.7rem;
+}
+
+.testi-quote {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--gris-texto);
+}
+
+/* ─────────────────────────────
+   COUNTERS / ESTADÍSTICAS
+───────────────────────────── */
+.counters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gris-borde);
+  border: 1px solid var(--gris-borde);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.counter-item {
+  background: var(--blanco);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+}
+
+.counter-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  color: var(--azul);
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+}
+
+.counter-num sup {
+  font-size: 45%;
+  color: var(--lima);
+  font-weight: 700;
+}
+
+.counter-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gris-texto);
+  margin-top: 0.5rem;
+}
+
+/* ─────────────────────────────
+   FORMULARIO DE CONTACTO
+───────────────────────────── */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--negro-texto);
+  letter-spacing: 0.02em;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1.5px solid var(--gris-borde);
+  border-radius: var(--radius-sm);
+  background: var(--blanco);
+  color: var(--negro-texto);
+  font-size: 0.95rem;
+  transition: var(--trans-fast);
+  outline: none;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 3px var(--azul-glow);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: #AAB4C8;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+/* ─────────────────────────────
+   PASOS / PROCESO
+───────────────────────────── */
+.step-item {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.step-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--azul);
+  color: var(--blanco);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px var(--azul-glow);
+}
+
+.step-body strong {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--negro-texto);
+  margin-bottom: 3px;
+}
+
+.step-body span {
+  font-size: 0.85rem;
+  color: var(--gris-texto);
+}
+
+/* ─────────────────────────────
+   RESPONSIVE COMPONENTS
+───────────────────────────── */
+@media (max-width: 900px) {
+  .counters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-card.featured {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-lg {
+    padding: 0.95rem 2rem;
+    font-size: 0.97rem;
+  }
+
+  .counters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testi-card {
+    width: 280px;
+  }
+}
