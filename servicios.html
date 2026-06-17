@@ -87,14 +87,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 @media(hover:none){.cur,.cur-r{display:none}}
 
 /* ─── Loader ─── */
-#loader{position:fixed;inset:0;z-index:10000;background:var(--blanco);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;}
-.ld-wrap{position:relative;width:90px;height:90px;display:flex;align-items:center;justify-content:center;}
-.ld-ring{position:absolute;inset:0;border-radius:50%;border:3px solid var(--fondo-suave);border-top-color:var(--azul);animation:ldspin 1s linear infinite;}
-.ld-emoji{font-size:2rem;}
 @keyframes ldspin{to{transform:rotate(360deg)}}
-.ld-name{font-family:var(--fd);font-weight:800;font-size:1.4rem;letter-spacing:-.02em;}
-.ld-name span{color:var(--azul);}
-.ld-tag{font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gris);margin-top:-.6rem;}
 
 /* ─── Progress bar de scroll ─── */
 #scrollbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--azul),var(--lima));z-index:9997;width:0%;transition:width .1s;}
@@ -196,7 +189,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
 
 .hero-mini-stats{display:flex;gap:2.2rem;flex-wrap:wrap;}
-.hms-item{}
+/*.hms-item{}*/
 .hms-num{font-family:var(--fd);font-weight:800;font-size:1.7rem;color:var(--negro);display:flex;align-items:baseline;gap:2px;}
 .hms-num sup{font-size:45%;color:var(--lima);}
 .hms-label{font-size:.74rem;color:var(--gris);margin-top:1px;}
@@ -321,7 +314,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .calc-opt:hover{border-color:var(--azul);}
 .calc-opt.sel{background:var(--azul);border-color:var(--azul);color:#fff;}
 .calc-slider-row{display:flex;align-items:center;gap:1rem;}
-.calc-slider{flex:1;-webkit-appearance:none;height:6px;border-radius:99px;background:var(--borde);outline:none;}
+.calc-slider{flex:1;-webkit-appearance:none;appearance:none;height:6px;border-radius:99px;background:var(--borde);outline:none;}
 .calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--azul);cursor:pointer;box-shadow:0 4px 12px var(--azul-glow);}
 .calc-kg-display{font-family:var(--fd);font-weight:800;font-size:1.3rem;color:var(--azul);min-width:60px;text-align:center;}
 .calc-result{margin-top:2rem;padding-top:2rem;border-top:1.5px dashed var(--borde);text-align:center;}
@@ -427,12 +420,6 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 <div id="scrollbar"></div>
 <div class="cur" id="cur"></div>
 <div class="cur-r" id="curR"></div>
-
-<div id="loader">
-  <div class="ld-wrap"><div class="ld-ring"></div><div class="ld-emoji">🧺</div></div>
-  <div class="ld-name">Lava<span>X</span></div>
-  <div class="ld-tag">Lavandería Premium · Huanta</div>
-</div>
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
@@ -765,15 +752,6 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
     el.addEventListener('mouseleave',()=>{r.style.width='40px';r.style.height='40px';r.style.borderColor='rgba(26,111,212,.35)';r.style.background='transparent';});
   });
 })();
-
-// ── LOADER ──
-window.addEventListener('load',()=>{
-  setTimeout(()=>{
-    const l=document.getElementById('loader');
-    l.style.transition='opacity .6s ease';l.style.opacity='0';
-    setTimeout(()=>l.style.display='none',650);
-  },1200);
-});
 
 // ── SCROLLBAR + NAVBAR ──
 const navbar=document.getElementById('navbar'),sb=document.getElementById('scrollbar');

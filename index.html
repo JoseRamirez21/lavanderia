@@ -196,7 +196,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
 
 .hero-mini-stats{display:flex;gap:2.2rem;flex-wrap:wrap;}
-/*.hms-item{}*/
+.hms-item{}
 .hms-num{font-family:var(--fd);font-weight:800;font-size:1.7rem;color:var(--negro);display:flex;align-items:baseline;gap:2px;}
 .hms-num sup{font-size:45%;color:var(--lima);}
 .hms-label{font-size:.74rem;color:var(--gris);margin-top:1px;}
@@ -262,6 +262,12 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
   <div class="ld-name">Lava<span>X</span></div>
   <div class="ld-tag">Lavandería Premium · Huanta</div>
 </div>
+<script>
+  // Oculta el loader al instante si ya se vio antes en esta sesión (evita parpadeo)
+  if (sessionStorage.getItem('lavax_loader_shown')) {
+    document.getElementById('loader').style.display = 'none';
+  }
+</script>
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
@@ -859,14 +865,20 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   });
 })();
 
-// ── LOADER ──
-window.addEventListener('load',()=>{
-  setTimeout(()=>{
-    const l=document.getElementById('loader');
-    l.style.transition='opacity .6s ease';l.style.opacity='0';
-    setTimeout(()=>l.style.display='none',650);
-  },1500);
-});
+// ── LOADER (animación de salida, solo primera vez por sesión) ──
+(function(){
+  const l = document.getElementById('loader');
+  if (l.style.display === 'none') return; // ya fue ocultado al instante arriba
+
+  sessionStorage.setItem('lavax_loader_shown', '1');
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      l.style.transition = 'opacity .6s ease';
+      l.style.opacity = '0';
+      setTimeout(() => l.style.display = 'none', 650);
+    }, 1500);
+  });
+})();
 
 // ── SCROLLBAR + NAVBAR ──
 const navbar=document.getElementById('navbar'),sb=document.getElementById('scrollbar');
