@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nosotros — LavaX Lavandería · Huanta</title>
-<meta name="description" content="Conoce la historia de LavaX, nuestro equipo, valores y compromiso con Huanta. 5 años cuidando la ropa de tu familia.">
+<title>Servicios y Precios — LavaX Lavandería · Huanta</title>
+<meta name="description" content="Conoce todos nuestros servicios y precios: lavado, secado, planchado, lavado a seco, ropa de cama y más. Lavandería LavaX en Huanta.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -251,9 +251,12 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 }
 
 /* ═══════════════════════════════════════
-   PAGE HERO (igual que servicios)
+   PAGE HERO (interior, más compacto)
 ═══════════════════════════════════════ */
-.page-hero{position:relative;padding:9.5rem 0 4rem;overflow:hidden;background:linear-gradient(150deg,#F4F8FE 0%,#fff 50%);}
+.page-hero{
+  position:relative;padding:9.5rem 0 4rem;overflow:hidden;
+  background:linear-gradient(150deg,#F4F8FE 0%,#fff 50%);
+}
 .page-hero .hero-grid-bg{opacity:.45;}
 .ph-in{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;}
 .ph-tag{display:inline-flex;align-items:center;gap:.55rem;background:#fff;border:1px solid var(--borde);box-shadow:var(--sh-sm);font-size:.78rem;font-weight:600;color:var(--gris-d);padding:.5rem 1.1rem;border-radius:99px;margin-bottom:1.5rem;}
@@ -265,119 +268,98 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .ph-stat-l{font-size:.74rem;color:var(--gris);margin-top:2px;}
 
 /* ═══════════════════════════════════════
-   HISTORIA — texto + foto con marco
+   PLANES — 3 columnas pricing
 ═══════════════════════════════════════ */
-#historia{padding:7.5rem 0;}
-.hist-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:4.5rem;align-items:center;}
-.hist-visual{position:relative;}
-.hist-img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-xl);box-shadow:var(--sh-lg);}
-.hist-badge{position:absolute;bottom:-22px;left:-26px;background:var(--azul);color:#fff;border-radius:var(--r-lg);padding:1.3rem 1.6rem;box-shadow:0 16px 36px var(--azul-glow);text-align:center;}
-.hist-badge-n{font-family:var(--fd);font-weight:800;font-size:2.4rem;line-height:1;}
-.hist-badge-l{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;opacity:.8;margin-top:2px;}
-.hist-text .s-tag{justify-content:flex-start;}
-.hist-text .s-title{font-size:clamp(2rem,3.6vw,2.8rem);text-align:left;}
-.hist-p{color:var(--gris);font-size:.98rem;line-height:1.85;margin-bottom:1.2rem;}
-.hist-sign{display:flex;align-items:center;gap:1rem;margin-top:1.8rem;}
-.hist-sign-av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--azul),var(--azul-l));display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:700;color:#fff;font-size:1.1rem;flex-shrink:0;}
-.hist-sign strong{display:block;font-size:.95rem;}
-.hist-sign span{font-size:.78rem;color:var(--gris);}
-@media(max-width:900px){.hist-grid{grid-template-columns:1fr;gap:2.5rem;}.hist-visual{max-width:420px;margin:0 auto;}.hist-text .s-tag,.hist-text .s-title{justify-content:center;text-align:center;}}
+#planes{padding:7rem 0;background:var(--fondo-suave);}
+.plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1050px;margin:0 auto;align-items:start;}
+.plan-card{background:#fff;border:1.5px solid var(--borde);border-radius:var(--r-lg);padding:2.4rem 2rem;text-align:center;position:relative;transition:transform .4s var(--ease),box-shadow .4s var(--ease);}
+.plan-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);}
+.plan-card.feat{border-color:var(--azul);box-shadow:var(--sh-lg);transform:scale(1.04);}
+.plan-card.feat:hover{transform:scale(1.04) translateY(-6px);}
+.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--azul);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 16px;border-radius:99px;white-space:nowrap;box-shadow:0 6px 16px var(--azul-glow);}
+.plan-ic{font-size:2.2rem;margin-bottom:1rem;}
+.plan-name{font-size:1.3rem;margin-bottom:.4rem;}
+.plan-sub{font-size:.84rem;color:var(--gris);margin-bottom:1.6rem;min-height:40px;}
+.plan-price{font-family:var(--fd);font-weight:800;font-size:2.8rem;color:var(--negro);line-height:1;margin-bottom:.2rem;}
+.plan-price sup{font-size:45%;}
+.plan-unit{font-size:.78rem;color:var(--gris);margin-bottom:1.8rem;}
+.plan-feats{display:flex;flex-direction:column;gap:.7rem;text-align:left;margin-bottom:1.8rem;}
+.plan-feat{display:flex;align-items:flex-start;gap:.6rem;font-size:.87rem;color:var(--gris-d);padding-bottom:.6rem;border-bottom:1px solid var(--borde);}
+.plan-feat:last-child{border-bottom:none;}
+.plan-feat .ck{color:var(--lima);font-weight:800;flex-shrink:0;}
+.plan-feat.no{color:#b8bfcc;}
+.plan-feat.no .ck{color:#d6dae3;}
 
 /* ═══════════════════════════════════════
-   LÍNEA DE TIEMPO
+   CATEGORÍAS DE PRECIOS — acordeón con tabla
 ═══════════════════════════════════════ */
-#timeline{padding:7.5rem 0;background:var(--fondo-suave);}
-.tl-wrap{max-width:760px;margin:0 auto;position:relative;}
-.tl-line{position:absolute;left:27px;top:6px;bottom:6px;width:2px;background:var(--borde);}
-.tl-item{position:relative;padding-left:74px;margin-bottom:2.4rem;}
-.tl-item:last-child{margin-bottom:0;}
-.tl-dot{position:absolute;left:0;top:0;width:56px;height:56px;border-radius:50%;background:#fff;border:2px solid var(--azul);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-weight:800;font-size:.92rem;color:var(--azul);z-index:1;box-shadow:var(--sh-sm);}
-.tl-card{background:#fff;border:1px solid var(--borde);border-radius:var(--r-md);padding:1.4rem 1.6rem;}
-.tl-tag{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--azul);margin-bottom:.4rem;}
-.tl-title{font-weight:700;font-size:1.05rem;margin-bottom:.4rem;}
-.tl-desc{font-size:.87rem;color:var(--gris);line-height:1.7;}
-@media(max-width:600px){.tl-item{padding-left:60px;}.tl-dot{width:46px;height:46px;font-size:.8rem;}.tl-line{left:22px;}}
+#tabla-precios{padding:7.5rem 0;}
+.cat-tabs{display:flex;justify-content:center;gap:.6rem;margin-bottom:3rem;flex-wrap:wrap;}
+.price-table-wrap{max-width:850px;margin:0 auto;}
+.price-cat-block{display:none;}
+.price-cat-block.active{display:block;animation:fadein .4s ease;}
+.pt-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:1rem;padding:1.1rem 1.4rem;border-radius:var(--r-md);transition:background .2s;}
+.pt-row:hover{background:var(--fondo-suave);}
+.pt-row:not(:last-child){border-bottom:1px solid var(--borde);}
+.pt-name{font-weight:600;font-size:.96rem;}
+.pt-name small{display:block;font-weight:400;font-size:.78rem;color:var(--gris);margin-top:2px;}
+.pt-time{font-size:.78rem;color:var(--gris);background:var(--fondo-suave);padding:4px 11px;border-radius:99px;white-space:nowrap;}
+.pt-price{font-family:var(--fd);font-weight:800;font-size:1.2rem;color:var(--azul);white-space:nowrap;text-align:right;min-width:90px;}
+.pt-price small{font-family:var(--fb);font-size:.65rem;font-weight:500;color:var(--gris);}
+@media(max-width:600px){.pt-row{grid-template-columns:1fr auto;}.pt-time{display:none;}}
 
 /* ═══════════════════════════════════════
-   MISIÓN / VISIÓN / VALORES
+   CALCULADORA DE PRECIO
 ═══════════════════════════════════════ */
-#mvv{padding:7.5rem 0;}
-.mvv-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;margin-bottom:3.5rem;}
-.mvv-card{border-radius:var(--r-lg);padding:2.4rem;position:relative;overflow:hidden;}
-.mvv-card.mision{background:var(--negro);color:#fff;}
-.mvv-card.vision{background:var(--azul-soft);border:1.5px solid rgba(26,111,212,.15);}
-.mvv-ic{font-size:2.2rem;margin-bottom:1.1rem;}
-.mvv-t{font-size:1.3rem;margin-bottom:.8rem;}
-.mvv-card.mision .mvv-t{color:#fff;}
-.mvv-d{font-size:.94rem;line-height:1.8;}
-.mvv-card.mision .mvv-d{color:rgba(255,255,255,.65);}
-.mvv-card.vision .mvv-d{color:var(--gris-d);}
-
-.val-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
-.val-card{text-align:center;padding:2rem 1.4rem;border-radius:var(--r-md);border:1px solid var(--borde);transition:all .35s var(--ease);}
-.val-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);border-color:transparent;}
-.val-ic{width:54px;height:54px;border-radius:14px;background:var(--azul-soft);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 1rem;transition:all .3s;}
-.val-card:hover .val-ic{background:var(--azul);transform:scale(1.08) rotate(-6deg);}
-.val-name{font-weight:700;font-size:.96rem;margin-bottom:.5rem;}
-.val-desc{font-size:.82rem;color:var(--gris);line-height:1.65;}
-@media(max-width:900px){.mvv-grid{grid-template-columns:1fr;}.val-grid{grid-template-columns:1fr 1fr;}}
-@media(max-width:560px){.val-grid{grid-template-columns:1fr;}}
+#calculadora{padding:7.5rem 0;background:var(--negro);position:relative;overflow:hidden;}
+#calculadora::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(26,111,212,.15),transparent 70%);top:-200px;right:-150px;}
+.calc-wrap{position:relative;z-index:1;max-width:680px;margin:0 auto;background:#fff;border-radius:var(--r-xl);padding:2.8rem;box-shadow:0 40px 90px rgba(0,0,0,.3);}
+.calc-step{margin-bottom:1.8rem;}
+.calc-label{font-weight:700;font-size:.92rem;margin-bottom:.8rem;display:flex;align-items:center;gap:.5rem;}
+.calc-opts{display:flex;gap:.6rem;flex-wrap:wrap;}
+.calc-opt{padding:.65rem 1.3rem;border-radius:99px;border:1.5px solid var(--borde);font-size:.86rem;font-weight:600;color:var(--gris-d);transition:all .2s;cursor:pointer;}
+.calc-opt:hover{border-color:var(--azul);}
+.calc-opt.sel{background:var(--azul);border-color:var(--azul);color:#fff;}
+.calc-slider-row{display:flex;align-items:center;gap:1rem;}
+.calc-slider{flex:1;-webkit-appearance:none;height:6px;border-radius:99px;background:var(--borde);outline:none;}
+.calc-slider::-webkit-slider-thumb{-webkit-appearance:none;width:24px;height:24px;border-radius:50%;background:var(--azul);cursor:pointer;box-shadow:0 4px 12px var(--azul-glow);}
+.calc-kg-display{font-family:var(--fd);font-weight:800;font-size:1.3rem;color:var(--azul);min-width:60px;text-align:center;}
+.calc-result{margin-top:2rem;padding-top:2rem;border-top:1.5px dashed var(--borde);text-align:center;}
+.calc-result-label{font-size:.78rem;color:var(--gris);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.5rem;}
+.calc-result-price{font-family:var(--fd);font-weight:800;font-size:3rem;color:var(--negro);line-height:1;margin-bottom:1.4rem;}
+.calc-result-price span{color:var(--azul);}
 
 /* ═══════════════════════════════════════
-   EQUIPO
+   ANTES/DESPUÉS slider
 ═══════════════════════════════════════ */
-#equipo{padding:7.5rem 0;background:var(--fondo-suave);}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;}
-.team-card{background:#fff;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--borde);transition:transform .35s var(--ease),box-shadow .35s var(--ease);}
-.team-card:hover{transform:translateY(-8px);box-shadow:var(--sh-md);}
-.team-photo{aspect-ratio:1/1;overflow:hidden;position:relative;}
-.team-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s;}
-.team-card:hover .team-photo img{transform:scale(1.07);}
-.team-body{padding:1.3rem 1.4rem;}
-.team-name{font-weight:700;font-size:1.02rem;margin-bottom:.15rem;}
-.team-role{font-size:.78rem;color:var(--azul);font-weight:600;margin-bottom:.7rem;}
-.team-desc{font-size:.8rem;color:var(--gris);line-height:1.6;}
-@media(max-width:900px){.team-grid{grid-template-columns:repeat(2,1fr);}}
+#antes-despues{padding:7.5rem 0;background:var(--fondo-suave);}
+.ad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1050px;margin:0 auto;}
+.ad-card{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--borde);background:#fff;transition:transform .35s var(--ease),box-shadow .35s var(--ease);}
+.ad-card:hover{transform:translateY(-6px);box-shadow:var(--sh-md);}
+.ad-imgs{display:grid;grid-template-columns:1fr 1fr;}
+.ad-imgs img{width:100%;aspect-ratio:1/1;object-fit:cover;}
+.ad-imgs .lbl{position:relative;}
+.ad-imgs .lbl::before{content:attr(data-l);position:absolute;top:8px;left:8px;background:rgba(11,21,38,.75);color:#fff;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:99px;}
+.ad-body{padding:1.3rem 1.4rem;}
+.ad-name{font-weight:700;font-size:.98rem;margin-bottom:.3rem;}
+.ad-desc{font-size:.82rem;color:var(--gris);}
 
 /* ═══════════════════════════════════════
-   INSTALACIONES / EQUIPO TÉCNICO
+   ZONA DE COBERTURA
 ═══════════════════════════════════════ */
-#instalaciones{padding:7.5rem 0;}
-.inst-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.inst-feats{display:flex;flex-direction:column;gap:1.3rem;margin-top:1.8rem;}
-.inst-feat{display:flex;gap:1rem;align-items:flex-start;}
-.inst-feat .ic{width:46px;height:46px;border-radius:13px;background:var(--azul-soft);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
-.inst-feat strong{display:block;font-size:.95rem;margin-bottom:.2rem;}
-.inst-feat span{font-size:.85rem;color:var(--gris);line-height:1.6;}
-.inst-gallery{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;}
-.inst-gallery img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-md);}
-.inst-gallery img:first-child{grid-row:span 2;aspect-ratio:1/2.05;}
-@media(max-width:900px){.inst-grid{grid-template-columns:1fr;gap:2.5rem;}}
+#cobertura{padding:7.5rem 0;}
+.cob-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center;}
+.cob-list{display:flex;flex-direction:column;gap:1rem;margin-top:1.8rem;}
+.cob-zone{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.4rem;background:var(--fondo-suave);border-radius:var(--r-md);border:1px solid var(--borde);}
+.cob-zone .ic{width:42px;height:42px;border-radius:12px;background:var(--azul-soft);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;}
+.cob-zone strong{display:block;font-size:.92rem;}
+.cob-zone span{font-size:.78rem;color:var(--gris);}
+.cob-zone .badge{margin-left:auto;background:rgba(61,186,110,.12);color:var(--lima-d);font-size:.68rem;font-weight:700;padding:4px 10px;border-radius:99px;white-space:nowrap;}
+.cob-map-box{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/3;}
+.cob-map-box iframe{width:100%;height:100%;border:0;}
 
 /* ═══════════════════════════════════════
-   CERTIFICACIONES / GARANTÍAS
-═══════════════════════════════════════ */
-#certificaciones{padding:6rem 0;background:var(--negro);}
-.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem;}
-.cert-card{text-align:center;padding:1.8rem 1.2rem;}
-.cert-ic{font-size:2.4rem;margin-bottom:.9rem;}
-.cert-t{color:#fff;font-weight:700;font-size:.92rem;margin-bottom:.4rem;}
-.cert-d{color:rgba(255,255,255,.45);font-size:.78rem;line-height:1.6;}
-@media(max-width:700px){.cert-grid{grid-template-columns:1fr 1fr;}}
-
-/* ═══════════════════════════════════════
-   COMPROMISO SOCIAL
-═══════════════════════════════════════ */
-#social{padding:7.5rem 0;}
-.soc-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.soc-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-xl);box-shadow:var(--sh-lg);}
-.soc-items{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.8rem;}
-.soc-item{display:flex;gap:.9rem;align-items:flex-start;font-size:.92rem;color:var(--gris-d);}
-.soc-item .ck{width:24px;height:24px;border-radius:50%;background:rgba(61,186,110,.12);color:var(--lima-d);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:800;flex-shrink:0;}
-@media(max-width:900px){.soc-grid{grid-template-columns:1fr;gap:2.5rem;}.soc-img{max-width:440px;margin:0 auto;}}
-
-/* ═══════════════════════════════════════
-   FAQ + CTA + FOOTER (mismos estilos)
+   FAQ SERVICIOS (reusa estilos #faq de index)
 ═══════════════════════════════════════ */
 #faq{padding:7.5rem 0;background:var(--fondo-suave);}
 .faq-wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:.8rem;}
@@ -391,6 +373,9 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .faq-it.open .faq-a{max-height:260px;}
 .faq-ai{padding:0 1.6rem 1.4rem;font-size:.92rem;color:var(--gris);line-height:1.75;}
 
+/* ═══════════════════════════════════════
+   CTA FINAL + FOOTER (mismo estilo que index)
+═══════════════════════════════════════ */
 #cta-final{padding:7rem 0;background:var(--negro);position:relative;overflow:hidden;text-align:center;}
 #cta-final::before{content:'';position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(26,111,212,.12),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);}
 .cf-in{position:relative;z-index:1;}
@@ -419,14 +404,22 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 @media(max-width:900px){.f-grid{grid-template-columns:1fr 1fr;gap:2rem;}.f-grid>div:first-child{grid-column:1/-1;}}
 @media(max-width:560px){.f-grid{grid-template-columns:1fr;}.f-bottom{flex-direction:column;text-align:center;}}
 
+/* ═══════════════════════════════════════
+   WA FLOAT + REVEALS (mismas que index)
+═══════════════════════════════════════ */
 #wa-float{position:fixed;bottom:2rem;right:2rem;z-index:400;width:62px;height:62px;border-radius:50%;background:var(--wa);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 26px rgba(37,211,102,.45);transition:transform .25s var(--ease);}
 #wa-float:hover{transform:scale(1.1);}
 #wa-float svg{width:28px;height:28px;fill:#fff;}
 #wa-float::before{content:'';position:absolute;inset:-10px;border-radius:50%;background:rgba(37,211,102,.16);animation:wapulse 2.4s ease-in-out infinite;}
 @keyframes wapulse{0%,100%{transform:scale(1);opacity:.55}50%{transform:scale(1.4);opacity:0}}
+@keyframes fadein{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 
 @media(max-width:900px){
-  #historia,#timeline,#mvv,#equipo,#instalaciones,#certificaciones,#social,#faq,#cta-final{padding:4.5rem 0;}
+  .plan-grid{grid-template-columns:1fr;max-width:380px;}
+  .plan-card.feat{transform:scale(1);}
+  .ad-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto;}
+  .cob-grid{grid-template-columns:1fr;gap:2.5rem;}
+  #planes,#tabla-precios,#calculadora,#antes-despues,#cobertura,#faq,#cta-final{padding:4.5rem 0;}
 }
 </style>
 <body>
@@ -448,8 +441,8 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Inicio</a></li>
-    <li><a href="servicios.html">Servicios</a></li>
-    <li><a href="nosotros.html" class="active">Nosotros</a></li>
+    <li><a href="servicios.html" class="active">Servicios</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
   <div class="nav-actions">
@@ -476,188 +469,226 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   <div class="hero-blob hb1" style="opacity:.7"></div>
   <div class="hero-blob hb2" style="opacity:.7"></div>
   <div class="container ph-in">
-    <div class="ph-tag ha"><span style="width:7px;height:7px;border-radius:50%;background:var(--lima);"></span> Conócenos un poco más</div>
-    <h1 class="ph-title ha" style="animation-delay:.12s">Detrás de cada<br><span class="az">prenda limpia</span></h1>
-    <p class="ph-desc ha" style="animation-delay:.22s">Somos una familia huantina que decidió resolver un problema real: el tiempo que toma mantener la ropa limpia. Esta es nuestra historia.</p>
+    <div class="ph-tag ha"><span style="width:7px;height:7px;border-radius:50%;background:var(--lima);"></span> Precios claros, sin sorpresas</div>
+    <h1 class="ph-title ha" style="animation-delay:.12s">Servicios y <span class="az">precios</span></h1>
+    <p class="ph-desc ha" style="animation-delay:.22s">Todo lo que tu ropa necesita, explicado con detalle: planes, precios por categoría, calculadora y zona de cobertura.</p>
     <div class="ph-stats ha" style="animation-delay:.32s">
-      <div class="ph-stat"><div class="ph-stat-n">5+</div><div class="ph-stat-l">Años de experiencia</div></div>
-      <div class="ph-stat"><div class="ph-stat-n">12</div><div class="ph-stat-l">Personas en el equipo</div></div>
-      <div class="ph-stat"><div class="ph-stat-n">3</div><div class="ph-stat-l">Sedes en la región</div></div>
+      <div class="ph-stat"><div class="ph-stat-n">+15</div><div class="ph-stat-l">Servicios distintos</div></div>
+      <div class="ph-stat"><div class="ph-stat-n">24h</div><div class="ph-stat-l">Entrega estándar</div></div>
+      <div class="ph-stat"><div class="ph-stat-n">100%</div><div class="ph-stat-l">Pago al recibir</div></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ HISTORIA ══════════════ -->
-<section id="historia">
-  <div class="container hist-grid">
-    <div class="hist-visual rv-l">
-      <img class="hist-img" src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=700&q=85&auto=format&fit=crop" alt="Historia de LavaX">
-      <div class="hist-badge float"><div class="hist-badge-n">2020</div><div class="hist-badge-l">Año de inicio</div></div>
-    </div>
-    <div class="hist-text rv-r">
-      <div class="s-tag">Nuestra historia</div>
-      <h2 class="s-title">De un local pequeño a la lavandería de confianza de Huanta</h2>
-      <p class="hist-p">LavaX nació en 2020 con una sola máquina, un local pequeño en el centro de Huanta y una idea simple: la ropa limpia no debería costarte tiempo que no tienes. Empezamos atendiendo a vecinos y conocidos, lavando prenda por prenda con el mismo cuidado que le daríamos a la nuestra.</p>
-      <p class="hist-p">Con el tiempo, la confianza de la comunidad nos permitió crecer. Hoy contamos con maquinaria industrial, un equipo capacitado y tres sedes que atienden Huanta y Huamanga, pero seguimos operando con la misma filosofía del primer día: tratar cada prenda como si fuera de la familia.</p>
-      <p class="hist-p">Más de 1,200 familias confían en nosotros cada mes, y ese número sigue creciendo porque entendemos que detrás de cada bolsa de ropa hay una persona ocupada que simplemente necesita una mano de confianza.</p>
-      <div class="hist-sign">
-        <div class="hist-sign-av">LX</div>
-        <div><strong>Equipo Fundador LavaX</strong><span>Huanta, Ayacucho · Desde 2020</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ LÍNEA DE TIEMPO ══════════════ -->
-<section id="timeline">
+<!-- ══════════════ PLANES ══════════════ -->
+<section id="planes">
   <div class="container">
     <div class="s-head rv">
-      <div class="s-tag">Nuestro camino</div>
-      <h2 class="s-title">Cinco años de <span class="lm">crecimiento</span></h2>
+      <div class="s-tag">Elige tu plan</div>
+      <h2 class="s-title">Planes para cada <span class="az">ritmo de vida</span></h2>
+      <p class="s-desc">Ya sea que laves ocasionalmente o necesites servicio recurrente, tenemos un plan a tu medida.</p>
     </div>
-    <div class="tl-wrap">
-      <div class="tl-line"></div>
-      <div class="tl-item rv-l">
-        <div class="tl-dot">2020</div>
-        <div class="tl-card"><div class="tl-tag">El comienzo</div><div class="tl-title">Apertura del primer local</div><p class="tl-desc">Abrimos nuestras puertas en Huanta Centro con una sola máquina y muchas ganas de hacer las cosas bien.</p></div>
+    <div class="plan-grid stg">
+
+      <div class="plan-card">
+        <div class="plan-ic">🧺</div>
+        <div class="plan-name">Básico</div>
+        <div class="plan-sub">Para quienes lavan de vez en cuando</div>
+        <div class="plan-price">S/5<sup>/kg</sup></div>
+        <div class="plan-unit">Sin mínimo de pedido</div>
+        <div class="plan-feats">
+          <div class="plan-feat"><span class="ck">✓</span> Lavado y secado estándar</div>
+          <div class="plan-feat"><span class="ck">✓</span> Separación por colores</div>
+          <div class="plan-feat"><span class="ck">✓</span> Entrega en 24-48h</div>
+          <div class="plan-feat no"><span class="ck">✕</span> Recojo a domicilio</div>
+          <div class="plan-feat no"><span class="ck">✕</span> Planchado incluido</div>
+        </div>
+        <button class="btn btn-outline btn-block" onclick="waServicio('Plan Básico')">Elegir Básico</button>
       </div>
-      <div class="tl-item rv-r">
-        <div class="tl-dot">2021</div>
-        <div class="tl-card"><div class="tl-tag">Crecimiento</div><div class="tl-title">Incorporamos el recojo a domicilio</div><p class="tl-desc">La demanda creció tanto que sumamos el servicio de recojo y entrega gratis para toda la ciudad.</p></div>
+
+      <div class="plan-card feat">
+        <div class="plan-badge">⭐ Más elegido</div>
+        <div class="plan-ic">✨</div>
+        <div class="plan-name">Estándar</div>
+        <div class="plan-sub">El equilibrio perfecto precio-calidad</div>
+        <div class="plan-price">S/7<sup>/kg</sup></div>
+        <div class="plan-unit">Mínimo 4 kg por pedido</div>
+        <div class="plan-feats">
+          <div class="plan-feat"><span class="ck">✓</span> Lavado, secado y doblado</div>
+          <div class="plan-feat"><span class="ck">✓</span> Recojo y entrega gratis</div>
+          <div class="plan-feat"><span class="ck">✓</span> Detergente premium</div>
+          <div class="plan-feat"><span class="ck">✓</span> Entrega garantizada en 24h</div>
+          <div class="plan-feat no"><span class="ck">✕</span> Planchado incluido</div>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="waServicio('Plan Estándar')">Elegir Estándar</button>
       </div>
-      <div class="tl-item rv-l">
-        <div class="tl-dot">2022</div>
-        <div class="tl-card"><div class="tl-tag">Expansión</div><div class="tl-title">Segunda sede en Huanta Norte</div><p class="tl-desc">Abrimos una nueva sede para reducir tiempos de espera y atender mejor a más familias.</p></div>
+
+      <div class="plan-card">
+        <div class="plan-ic">👑</div>
+        <div class="plan-name">Premium</div>
+        <div class="plan-sub">Servicio completo sin preocuparte de nada</div>
+        <div class="plan-price">S/10<sup>/kg</sup></div>
+        <div class="plan-unit">Mínimo 4 kg por pedido</div>
+        <div class="plan-feats">
+          <div class="plan-feat"><span class="ck">✓</span> Lavado, secado y planchado</div>
+          <div class="plan-feat"><span class="ck">✓</span> Recojo y entrega prioritaria</div>
+          <div class="plan-feat"><span class="ck">✓</span> Entrega en percha o doblado</div>
+          <div class="plan-feat"><span class="ck">✓</span> Servicio express disponible</div>
+          <div class="plan-feat"><span class="ck">✓</span> Atención preferente 24/7</div>
+        </div>
+        <button class="btn btn-outline btn-block" onclick="waServicio('Plan Premium')">Elegir Premium</button>
       </div>
-      <div class="tl-item rv-r">
-        <div class="tl-dot">2023</div>
-        <div class="tl-card"><div class="tl-tag">Tecnología</div><div class="tl-title">Maquinaria industrial</div><p class="tl-desc">Invertimos en equipos de lavado y secado industrial para mejorar tiempos y calidad de acabado.</p></div>
-      </div>
-      <div class="tl-item rv-l">
-        <div class="tl-dot">2024</div>
-        <div class="tl-card"><div class="tl-tag">Llegamos más lejos</div><div class="tl-title">Tercera sede en Huamanga</div><p class="tl-desc">Cruzamos a Huamanga para llevar el mismo servicio de calidad a más familias de la región.</p></div>
-      </div>
-      <div class="tl-item rv-r">
-        <div class="tl-dot">Hoy</div>
-        <div class="tl-card"><div class="tl-tag">Presente</div><div class="tl-title">+1,200 familias confían en nosotros</div><p class="tl-desc">Seguimos creciendo cada mes, siempre con el mismo compromiso: cuidar tu ropa como si fuera nuestra.</p></div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ══════════════ MISIÓN / VISIÓN / VALORES ══════════════ -->
-<section id="mvv">
-  <div class="container">
-    <div class="mvv-grid stg">
-      <div class="mvv-card mision">
-        <div class="mvv-ic">🎯</div>
-        <div class="mvv-t">Nuestra misión</div>
-        <p class="mvv-d">Devolverle tiempo a las familias de Huanta y Huamanga, ofreciendo un servicio de lavandería confiable, accesible y de calidad profesional, sin que tengan que salir de casa.</p>
-      </div>
-      <div class="mvv-card vision">
-        <div class="mvv-ic">🔭</div>
-        <div class="mvv-t">Nuestra visión</div>
-        <p class="mvv-d">Ser la lavandería líder de la región Ayacucho, reconocida por su excelencia en el servicio, su compromiso con la comunidad y su capacidad de innovar en cada detalle del proceso.</p>
-      </div>
-    </div>
-
-    <div class="s-head rv">
-      <div class="s-tag">Lo que nos define</div>
-      <h2 class="s-title">Nuestros <span class="az">valores</span></h2>
-    </div>
-    <div class="val-grid stg">
-      <div class="val-card"><div class="val-ic">🤝</div><div class="val-name">Confianza</div><div class="val-desc">Tratamos cada prenda con el mismo cuidado que le darías tú mismo.</div></div>
-      <div class="val-card"><div class="val-ic">⚡</div><div class="val-name">Rapidez</div><div class="val-desc">Entendemos que tu tiempo vale, por eso cumplimos siempre los plazos.</div></div>
-      <div class="val-card"><div class="val-ic">💎</div><div class="val-name">Calidad</div><div class="val-desc">Usamos productos premium y procesos pensados para cada tipo de tela.</div></div>
-      <div class="val-card"><div class="val-ic">❤️</div><div class="val-name">Cercanía</div><div class="val-desc">Somos de Huanta, conocemos a nuestros clientes y eso se nota en el trato.</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ EQUIPO ══════════════ -->
-<section id="equipo">
+<!-- ══════════════ TABLA DE PRECIOS POR CATEGORÍA ══════════════ -->
+<section id="tabla-precios">
   <div class="container">
     <div class="s-head rv">
-      <div class="s-tag">Las personas detrás</div>
-      <h2 class="s-title">Conoce a nuestro <span class="lm">equipo</span></h2>
-      <p class="s-desc">Un equipo capacitado y comprometido, listo para cuidar tu ropa como se merece.</p>
+      <div class="s-tag">Lista de precios</div>
+      <h2 class="s-title">Precio exacto por <span class="lm">prenda</span></h2>
+      <p class="s-desc">Selecciona una categoría para ver el detalle completo de precios.</p>
     </div>
-    <div class="team-grid stg">
-      <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop" alt="Fundadora"></div>
-        <div class="team-body"><div class="team-name">[Nombre fundador/a]</div><div class="team-role">Fundadora & Directora</div><div class="team-desc">Lidera la visión de LavaX desde 2020, enfocada en la calidad y el trato cercano con cada cliente.</div></div>
+
+    <div class="cat-tabs rv">
+      <button class="tab-btn active" data-cat="ropa">👕 Ropa diaria</button>
+      <button class="tab-btn" data-cat="formal">👔 Ropa formal</button>
+      <button class="tab-btn" data-cat="cama">🛏️ Hogar y cama</button>
+      <button class="tab-btn" data-cat="especial">🧥 Especiales</button>
+    </div>
+
+    <div class="price-table-wrap rv">
+      <div class="price-cat-block active" id="cat-ropa">
+        <div class="pt-row"><div class="pt-name">Polo / Camiseta<small>Lavado y secado</small></div><div class="pt-time">24h</div><div class="pt-price">S/3<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Pantalón / Jean<small>Lavado y secado</small></div><div class="pt-time">24h</div><div class="pt-price">S/5<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Polera / Buzo<small>Lavado y secado</small></div><div class="pt-time">24h</div><div class="pt-price">S/6<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Ropa interior<small>Lavado por separado</small></div><div class="pt-time">24h</div><div class="pt-price">S/1.50<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Lavado por kilo<small>Mezcla de prendas casuales</small></div><div class="pt-time">24-48h</div><div class="pt-price">S/5<small>/kg</small></div></div>
+        <div class="pt-row"><div class="pt-name">Chompa / Casaca liviana<small>Lavado especial</small></div><div class="pt-time">24h</div><div class="pt-price">S/8<small>/u</small></div></div>
       </div>
-      <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop" alt="Jefe de operaciones"></div>
-        <div class="team-body"><div class="team-name">[Nombre]</div><div class="team-role">Jefe de Operaciones</div><div class="team-desc">Coordina el recojo, procesamiento y entrega para que todo llegue siempre a tiempo.</div></div>
+
+      <div class="price-cat-block" id="cat-formal">
+        <div class="pt-row"><div class="pt-name">Camisa<small>Lavado + planchado</small></div><div class="pt-time">24h</div><div class="pt-price">S/6<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Pantalón de vestir<small>Lavado + planchado</small></div><div class="pt-time">24h</div><div class="pt-price">S/7<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Saco / Blazer<small>Lavado a seco</small></div><div class="pt-time">48h</div><div class="pt-price">S/18<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Terno completo (2 piezas)<small>Lavado a seco + planchado</small></div><div class="pt-time">48h</div><div class="pt-price">S/35<small>/set</small></div></div>
+        <div class="pt-row"><div class="pt-name">Vestido de gala<small>Lavado a seco delicado</small></div><div class="pt-time">48-72h</div><div class="pt-price">S/25<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Corbata<small>Lavado a seco</small></div><div class="pt-time">48h</div><div class="pt-price">S/6<small>/u</small></div></div>
       </div>
-      <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop" alt="Especialista en lavado"></div>
-        <div class="team-body"><div class="team-name">[Nombre]</div><div class="team-role">Especialista en Lavado a Seco</div><div class="team-desc">Experta en el cuidado de prendas delicadas, trajes y telas especiales.</div></div>
+
+      <div class="price-cat-block" id="cat-cama">
+        <div class="pt-row"><div class="pt-name">Sábana (1.5 / 2 plazas)<small>Lavado y secado</small></div><div class="pt-time">24h</div><div class="pt-price">S/12<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Frazada / Manta<small>Lavado especial</small></div><div class="pt-time">48h</div><div class="pt-price">S/20<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Cobertor / Edredón<small>Lavado y secado industrial</small></div><div class="pt-time">48h</div><div class="pt-price">S/28<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Funda de almohada<small>Lavado y secado</small></div><div class="pt-time">24h</div><div class="pt-price">S/4<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Cortina (por metro)<small>Lavado delicado</small></div><div class="pt-time">48h</div><div class="pt-price">S/10<small>/m</small></div></div>
+        <div class="pt-row"><div class="pt-name">Toalla grande<small>Lavado y secado</small></div><div class="pt-time">24h</div><div class="pt-price">S/5<small>/u</small></div></div>
       </div>
-      <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format&fit=crop" alt="Atención al cliente"></div>
-        <div class="team-body"><div class="team-name">[Nombre]</div><div class="team-role">Atención al Cliente</div><div class="team-desc">La primera persona que te atiende por WhatsApp, siempre con una sonrisa.</div></div>
+
+      <div class="price-cat-block" id="cat-especial">
+        <div class="pt-row"><div class="pt-name">Abrigo / Casaca de cuero<small>Lavado a seco premium</small></div><div class="pt-time">72h</div><div class="pt-price">S/30<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Prenda de lana / Cashmere<small>Lavado delicado a mano</small></div><div class="pt-time">48h</div><div class="pt-price">S/22<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Vestido de novia<small>Lavado a seco especializado</small></div><div class="pt-time">5-7 días</div><div class="pt-price">S/80<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Peluche / Muñeco grande<small>Lavado y secado</small></div><div class="pt-time">48h</div><div class="pt-price">S/15<small>/u</small></div></div>
+        <div class="pt-row"><div class="pt-name">Zapatillas (limpieza)<small>Limpieza profunda</small></div><div class="pt-time">48h</div><div class="pt-price">S/18<small>/par</small></div></div>
+        <div class="pt-row"><div class="pt-name">Servicio express 12h<small>Cargo adicional sobre cualquier prenda</small></div><div class="pt-time">12h</div><div class="pt-price">+S/8<small>extra</small></div></div>
       </div>
+    </div>
+
+    <div style="text-align:center;margin-top:2.2rem" class="rv">
+      <button class="btn btn-dark" onclick="waOpen('Hola, tengo una consulta sobre precios de un servicio que no encontré en la lista 🧺')">¿No encuentras tu prenda? Pregúntanos →</button>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ INSTALACIONES ══════════════ -->
-<section id="instalaciones">
-  <div class="container inst-grid">
-    <div class="rv-l">
-      <div class="s-tag" style="justify-content:flex-start">Nuestras instalaciones</div>
-      <h2 class="s-title" style="font-size:clamp(1.9rem,3.5vw,2.6rem)">Tecnología pensada para <span class="az">el cuidado real</span></h2>
-      <p class="s-desc" style="margin:0">Contamos con maquinaria industrial de última generación, pensada para lavar mejor, más rápido y cuidando cada tipo de tela.</p>
-      <div class="inst-feats">
-        <div class="inst-feat"><div class="ic">🌀</div><div><strong>Lavadoras industriales</strong><span>Alta capacidad con programas específicos por tipo de tela y color.</span></div></div>
-        <div class="inst-feat"><div class="ic">🔥</div><div><strong>Secadoras de alta eficiencia</strong><span>Secado uniforme sin dañar fibras ni encoger las prendas.</span></div></div>
-        <div class="inst-feat"><div class="ic">🧴</div><div><strong>Productos premium importados</strong><span>Detergentes y suavizantes de marcas reconocidas, hipoalergénicos.</span></div></div>
-        <div class="inst-feat"><div class="ic">🧊</div><div><strong>Cámara de lavado en seco</strong><span>Equipo especializado para trajes, abrigos y telas delicadas.</span></div></div>
-      </div>
-    </div>
-    <div class="rv-r">
-      <div class="inst-gallery">
-        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=500&q=80&auto=format&fit=crop" alt="Local">
-        <img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=500&q=80&auto=format&fit=crop" alt="Planchado">
-        <img src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=500&q=80&auto=format&fit=crop" alt="Doblado">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ CERTIFICACIONES / GARANTÍAS ══════════════ -->
-<section id="certificaciones">
+<!-- ══════════════ CALCULADORA ══════════════ -->
+<section id="calculadora">
   <div class="container">
-    <div class="s-head rv" style="margin-bottom:3rem">
-      <div class="s-tag" style="color:var(--azul-l)">Compromisos</div>
-      <h2 class="s-title" style="color:#fff">Garantías que <span class="az2" style="color:var(--azul-l)">respaldan</span> nuestro trabajo</h2>
+    <div class="s-head rv" style="margin-bottom:3rem;">
+      <div class="s-tag" style="color:var(--azul-l)">Cotiza al instante</div>
+      <h2 class="s-title" style="color:#fff">Calcula tu <span class="az2" style="color:var(--azul-l)">precio estimado</span></h2>
+      <p class="s-desc" style="color:rgba(255,255,255,.55)">Mueve el control y elige tu plan para ver un estimado al instante.</p>
     </div>
-    <div class="cert-grid stg">
-      <div class="cert-card"><div class="cert-ic">🛡️</div><div class="cert-t">Garantía de satisfacción</div><div class="cert-d">Si algo no quedó como esperabas, lo volvemos a hacer sin costo extra.</div></div>
-      <div class="cert-card"><div class="cert-ic">⏱️</div><div class="cert-t">Entrega puntual</div><div class="cert-d">Cumplimos el tiempo acordado o te avisamos antes con anticipación.</div></div>
-      <div class="cert-card"><div class="cert-ic">🔒</div><div class="cert-t">Pago seguro al recibir</div><div class="cert-d">Nunca pagas por adelantado. Pagas solo cuando tu ropa está en tus manos.</div></div>
-      <div class="cert-card"><div class="cert-ic">🌱</div><div class="cert-t">Productos responsables</div><div class="cert-d">Usamos detergentes biodegradables que cuidan tu piel y el ambiente.</div></div>
+
+    <div class="calc-wrap rv-sc">
+      <div class="calc-step">
+        <div class="calc-label">1️⃣ Elige tu plan</div>
+        <div class="calc-opts" id="calcPlan">
+          <div class="calc-opt sel" data-price="5">Básico · S/5/kg</div>
+          <div class="calc-opt" data-price="7">Estándar · S/7/kg</div>
+          <div class="calc-opt" data-price="10">Premium · S/10/kg</div>
+        </div>
+      </div>
+      <div class="calc-step">
+        <div class="calc-label">2️⃣ ¿Cuántos kilos aprox.?</div>
+        <div class="calc-slider-row">
+          <input type="range" min="1" max="20" value="5" class="calc-slider" id="calcKg">
+          <div class="calc-kg-display" id="calcKgDisplay">5 kg</div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="calc-result-label">Precio estimado</div>
+        <div class="calc-result-price">S/<span id="calcResult">25</span></div>
+        <button class="btn btn-primary btn-lg btn-block" onclick="waCalc()">📲 Pedir con este estimado</button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ COMPROMISO SOCIAL ══════════════ -->
-<section id="social">
-  <div class="container soc-grid">
-    <div class="rv-l">
-      <img class="soc-img" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=700&q=80&auto=format&fit=crop" alt="Compromiso con Huanta">
+<!-- ══════════════ ANTES / DESPUÉS ══════════════ -->
+<section id="antes-despues">
+  <div class="container">
+    <div class="s-head rv">
+      <div class="s-tag">Resultados reales</div>
+      <h2 class="s-title">El antes y <span class="lm">después</span></h2>
     </div>
-    <div class="rv-r">
-      <div class="s-tag" style="justify-content:flex-start">Compromiso con Huanta</div>
-      <h2 class="s-title" style="font-size:clamp(1.9rem,3.5vw,2.6rem)">Crecemos junto a <span class="lm">nuestra comunidad</span></h2>
-      <p class="s-desc" style="margin:0">Como negocio local, creemos en devolverle a Huanta parte de lo que nos ha dado.</p>
-      <div class="soc-items">
-        <div class="soc-item"><span class="ck">✓</span> Generamos empleo local: el 100% de nuestro equipo es de Huanta y alrededores.</div>
-        <div class="soc-item"><span class="ck">✓</span> Donamos servicio de lavado a comedores populares una vez al mes.</div>
-        <div class="soc-item"><span class="ck">✓</span> Capacitamos a jóvenes de la zona en oficios de lavandería y planchado.</div>
-        <div class="soc-item"><span class="ck">✓</span> Trabajamos con proveedores locales siempre que es posible.</div>
+    <div class="ad-grid stg">
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="lbl" data-l="Antes"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=350&q=75&auto=format&fit=crop" alt="Antes"></div>
+          <div class="lbl" data-l="Después"><img src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=350&q=75&auto=format&fit=crop" alt="Después"></div>
+        </div>
+        <div class="ad-body"><div class="ad-name">Camisas de oficina</div><div class="ad-desc">Lavado + planchado profesional</div></div>
+      </div>
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="lbl" data-l="Antes"><img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=350&q=75&auto=format&fit=crop" alt="Antes"></div>
+          <div class="lbl" data-l="Después"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=350&q=75&auto=format&fit=crop" alt="Después"></div>
+        </div>
+        <div class="ad-body"><div class="ad-name">Ropa de cama</div><div class="ad-desc">Lavado industrial profundo</div></div>
+      </div>
+      <div class="ad-card">
+        <div class="ad-imgs">
+          <div class="lbl" data-l="Antes"><img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=350&q=75&auto=format&fit=crop" alt="Antes"></div>
+          <div class="lbl" data-l="Después"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=350&q=75&auto=format&fit=crop" alt="Después"></div>
+        </div>
+        <div class="ad-body"><div class="ad-name">Trajes y sacos</div><div class="ad-desc">Lavado a seco premium</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ COBERTURA ══════════════ -->
+<section id="cobertura">
+  <div class="container">
+    <div class="cob-grid">
+      <div class="rv-l">
+        <div class="s-tag" style="justify-content:flex-start;">Zona de cobertura</div>
+        <h2 class="s-title" style="font-size:clamp(1.9rem,3.5vw,2.6rem)">¿Llegamos a tu <span class="az">zona?</span></h2>
+        <p class="s-desc" style="margin:0">Recojo y entrega gratis en estas zonas. Si no estás seguro, escríbenos y confirmamos al instante.</p>
+        <div class="cob-list">
+          <div class="cob-zone"><div class="ic">📍</div><div><strong>Huanta Centro</strong><span>Cobertura completa</span></div><div class="badge">Gratis</div></div>
+          <div class="cob-zone"><div class="ic">📍</div><div><strong>Huanta Norte</strong><span>Cobertura completa</span></div><div class="badge">Gratis</div></div>
+          <div class="cob-zone"><div class="ic">📍</div><div><strong>Luricocha</strong><span>Cobertura completa</span></div><div class="badge">Gratis</div></div>
+          <div class="cob-zone"><div class="ic">📍</div><div><strong>Huamanga</strong><span>Consultar horario</span></div><div class="badge" style="background:rgba(255,138,76,.12);color:var(--naranja)">+S/5</div></div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="cob-map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d488.5!2d-74.246!3d-12.927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU1JzM3LjIiUyA3NMKwMTQnNDUuNiJX!5e0!3m2!1ses!2spe!4v1" loading="lazy"></iframe>
+        </div>
       </div>
     </div>
   </div>
@@ -668,13 +699,14 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   <div class="container">
     <div class="s-head rv">
       <div class="s-tag">Preguntas frecuentes</div>
-      <h2 class="s-title">Sobre <span class="az">nosotros</span></h2>
+      <h2 class="s-title">Dudas sobre <span class="az">servicios y precios</span></h2>
     </div>
     <div class="faq-wrap">
-      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Hace cuánto tiempo operan en Huanta?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Desde 2020, ya llevamos más de 5 años atendiendo a familias de Huanta y, desde 2024, también de Huamanga.</div></div></div>
-      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿El equipo está capacitado para prendas delicadas?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Sí, contamos con personal especializado en lavado a seco y cuidado de telas finas como seda, lana y cashmere.</div></div></div>
-      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Puedo visitar el local para conocer las instalaciones?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Por supuesto, te invitamos a visitar cualquiera de nuestras 3 sedes en Huanta y Huamanga en horario de atención.</div></div></div>
-      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Trabajan con empresas o solo clientes particulares?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Trabajamos con ambos. Tenemos planes especiales para hoteles, restaurantes y empresas con necesidades recurrentes.</div></div></div>
+      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Cómo se calcula el precio por kilo?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Pesamos tu ropa al recogerla y te confirmamos el precio exacto antes de procesarla. Nunca hay cobros sorpresa.</div></div></div>
+      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Puedo combinar diferentes servicios en un pedido?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Sí, puedes mandar ropa casual, formal y de cama en el mismo pedido. Te damos el precio detallado por categoría.</div></div></div>
+      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Qué pasa si mi pedido pesa menos del mínimo?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Para los planes Estándar y Premium el mínimo es 4kg. Si pesa menos, igual te cobramos como si fueran 4kg, sin cargos extra.</div></div></div>
+      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿El servicio express tiene algún límite?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">El express de 12h aplica para pedidos de hasta 8kg o 10 prendas formales. Para más cantidad, coordina con nosotros por WhatsApp.</div></div></div>
+      <div class="faq-it"><button class="faq-b" onclick="toggleFaq(this)"><span class="faq-q">¿Tienen descuentos por pedidos frecuentes?</span><span class="faq-chv">▼</span></button><div class="faq-a"><div class="faq-ai">Sí, a partir del tercer pedido en el mes obtienes 5% de descuento automático. Pregunta por nuestro plan mensual para empresas.</div></div></div>
     </div>
   </div>
 </section>
@@ -682,12 +714,12 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 <!-- ══════════════ CTA FINAL ══════════════ -->
 <section id="cta-final">
   <div class="container cf-in rv">
-    <div class="cf-tag">✦ Únete a la familia LavaX ✦</div>
-    <h2 class="cf-title">Déjanos cuidar<br>tu <span class="az2">ropa hoy</span></h2>
-    <p class="cf-desc">Escríbenos y descubre por qué más de 1,200 familias en Huanta ya confían en nosotros.</p>
+    <div class="cf-tag">✦ Cotiza gratis por WhatsApp ✦</div>
+    <h2 class="cf-title">¿Listo para<br>tu <span class="az2">primer pedido?</span></h2>
+    <p class="cf-desc">Escríbenos con el detalle de tu ropa y te damos el precio exacto en minutos.</p>
     <div class="cf-btns">
       <button class="btn btn-primary btn-lg" onclick="waPedido()">📲 Pedir por WhatsApp</button>
-      <a href="servicios.html" class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4)">Ver servicios →</a>
+      <a href="contacto.html" class="btn" style="background:transparent;color:#fff;border-color:rgba(255,255,255,.4)">📍 Ver sedes</a>
     </div>
     <div class="cf-trust">✦ Yape · Plin · Efectivo · Pago al recibir ✦</div>
   </div>
@@ -728,7 +760,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   let mx=0,my=0,rx=0,ry=0;
   document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;c.style.left=mx+'px';c.style.top=my+'px';});
   (function loop(){rx+=(mx-rx)*.15;ry+=(my-ry)*.15;r.style.left=rx+'px';r.style.top=ry+'px';requestAnimationFrame(loop);})();
-  document.querySelectorAll('a,button,.val-card,.team-card,.tl-card,.cert-card,.faq-b').forEach(el=>{
+  document.querySelectorAll('a,button,.plan-card,.pt-row,.ad-card,.cob-zone,.faq-b').forEach(el=>{
     el.addEventListener('mouseenter',()=>{r.style.width='56px';r.style.height='56px';r.style.borderColor='rgba(26,111,212,.7)';r.style.background='rgba(26,111,212,.06)';});
     el.addEventListener('mouseleave',()=>{r.style.width='40px';r.style.height='40px';r.style.borderColor='rgba(26,111,212,.35)';r.style.background='transparent';});
   });
@@ -770,11 +802,45 @@ const io=new IntersectionObserver(entries=>{
 },{threshold:.12});
 document.querySelectorAll('.rv,.rv-l,.rv-r,.rv-sc,.stg').forEach(el=>io.observe(el));
 
+// ── CAT TABS (tabla de precios) ──
+document.querySelectorAll('.cat-tabs .tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.cat-tabs .tab-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.price-cat-block').forEach(b=>b.classList.remove('active'));
+    document.getElementById('cat-'+btn.dataset.cat).classList.add('active');
+  });
+});
+
 // ── FAQ ──
 function toggleFaq(btn){
   const item=btn.parentElement,wasOpen=item.classList.contains('open');
   document.querySelectorAll('.faq-it').forEach(i=>i.classList.remove('open'));
   if(!wasOpen)item.classList.add('open');
+}
+
+// ── CALCULADORA ──
+let calcPricePerKg=5,calcKg=5;
+document.querySelectorAll('#calcPlan .calc-opt').forEach(opt=>{
+  opt.addEventListener('click',()=>{
+    document.querySelectorAll('#calcPlan .calc-opt').forEach(o=>o.classList.remove('sel'));
+    opt.classList.add('sel');
+    calcPricePerKg=+opt.dataset.price;
+    updateCalc();
+  });
+});
+const calcSlider=document.getElementById('calcKg');
+calcSlider.addEventListener('input',()=>{
+  calcKg=+calcSlider.value;
+  document.getElementById('calcKgDisplay').textContent=calcKg+' kg';
+  updateCalc();
+});
+function updateCalc(){
+  const total=calcPricePerKg*calcKg;
+  document.getElementById('calcResult').textContent=total;
+}
+function waCalc(){
+  waOpen(`Hola LavaX, hice una cotización: ${calcKg}kg al plan de S/${calcPricePerKg}/kg = S/${calcPricePerKg*calcKg} aprox. Quiero hacer mi pedido 🧺`);
 }
 
 // ── WHATSAPP ──
