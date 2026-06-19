@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LavaX — Lavandería Premium · Huanta, Ayacucho</title>
-<meta name="description" content="Lavandería premium en Huanta. Lavado, secado, planchado y entrega a domicilio en 24h.">
+<title>Lavandería Kalefh — Premium · Huanta, Ayacucho</title>
+<meta name="description" content="Lavandería premium en Huanta. Recojo gratis, lavado profesional y entrega en 24h. Más de 1,200 familias confían en nosotros.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -90,7 +90,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 #loader{position:fixed;inset:0;z-index:10000;background:var(--blanco);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem;}
 .ld-wrap{position:relative;width:90px;height:90px;display:flex;align-items:center;justify-content:center;}
 .ld-ring{position:absolute;inset:0;border-radius:50%;border:3px solid var(--fondo-suave);border-top-color:var(--azul);animation:ldspin 1s linear infinite;}
-.ld-emoji{font-size:2rem;}
+.ld-emoji{font-size:2rem;display:flex;align-items:center;justify-content:center;}
 @keyframes ldspin{to{transform:rotate(360deg)}}
 .ld-name{font-family:var(--fd);font-weight:800;font-size:1.4rem;letter-spacing:-.02em;}
 .ld-name span{color:var(--azul);}
@@ -196,7 +196,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
 
 .hero-mini-stats{display:flex;gap:2.2rem;flex-wrap:wrap;}
-.hms-item{}
+
 .hms-num{font-family:var(--fd);font-weight:800;font-size:1.7rem;color:var(--negro);display:flex;align-items:baseline;gap:2px;}
 .hms-num sup{font-size:45%;color:var(--lima);}
 .hms-label{font-size:.74rem;color:var(--gris);margin-top:1px;}
@@ -250,6 +250,36 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
   .hero-mini-stats{gap:1.4rem;}
 }
 </style>
+
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="apple-touch-icon" href="assets/logo.png">
+  <meta name="theme-color" content="#1A6FD4">
+
+  <!-- ═══ OPEN GRAPH ═══ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Lavandería Kalefh">
+  <meta property="og:locale"      content="es_PE">
+  <meta property="og:title"       content="Lavandería Kalefh — Premium · Huanta, Ayacucho">
+  <meta property="og:description" content="Lavandería premium en Huanta. Recojo gratis, lavado profesional y entrega en 24h. Más de 1,200 familias confían en nosotros.">
+  <meta property="og:url"         content="https://lavax.pe/">
+  <meta property="og:image"       content="https://kalefh.pe/assets/og-image.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"   content="Kalefh — Lavandería Premium en Huanta">
+
+  <!-- ═══ TWITTER CARD ═══ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Lavandería Kalefh — Premium · Huanta, Ayacucho">
+  <meta name="twitter:description" content="Lavandería premium en Huanta. Recojo gratis, lavado profesional y entrega en 24h. Más de 1,200 familias confían en nosotros.">
+  <meta name="twitter:image"       content="https://kalefh.pe/assets/og-image.png">
+
+  <!-- ═══ SEO BASE ═══ -->
+  <link rel="canonical" href="https://lavax.pe/">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Lavandería Kalefh">
+  <meta name="geo.region" content="PE-AYA">
+  <meta name="geo.placename" content="Huanta, Ayacucho, Perú">
 </head>
 <body>
 
@@ -258,21 +288,20 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 <div class="cur-r" id="curR"></div>
 
 <div id="loader">
-  <div class="ld-wrap"><div class="ld-ring"></div><div class="ld-emoji">🧺</div></div>
-  <div class="ld-name">Lava<span>X</span></div>
+  <div class="ld-wrap"><div class="ld-ring"></div><div class="ld-emoji"><img src="assets/logo.png" alt="Kalefh" style="width:48px;height:48px;object-fit:contain;border-radius:10px;"></div></div>
+  <div class="ld-name">Lavandería<span> Kalefh</span></div>
   <div class="ld-tag">Lavandería Premium · Huanta</div>
 </div>
 <script>
   // Oculta el loader al instante si ya se vio antes en esta sesión (evita parpadeo)
-  if (sessionStorage.getItem('lavax_loader_shown')) {
+  if (sessionStorage.getItem('kalefh_loader_shown')) {
     document.getElementById('loader').style.display = 'none';
   }
 </script>
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-ic">🧺</div>
-    <span class="nav-logo-tx">Lava<span class="az">X</span></span>
+    <img src="assets/logo.png" alt="Lavandería Kalefh" style="height:38px;width:auto;object-fit:contain;">
   </a>
   <ul class="nav-links">
     <li><a href="index.html" class="active">Inicio</a></li>
@@ -440,7 +469,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 @media(max-width:500px){.proc-grid{grid-template-columns:1fr;}}
 
 /* ═══════════════════════════════════════
-   COMPARATIVA — LavaX vs Lavar en casa
+   COMPARATIVA — Kalefh vs Lavar en casa
 ═══════════════════════════════════════ */
 #comparativa{padding:7.5rem 0;}
 .comp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:880px;margin:0 auto;}
@@ -669,7 +698,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 <section id="comparativa">
   <div class="container">
     <div class="s-head rv">
-      <div class="s-tag">¿Por qué LavaX?</div>
+      <div class="s-tag">¿Por qué Kalefh?</div>
       <h2 class="s-title">Tu tiempo vale <span class="az">más</span></h2>
     </div>
     <div class="comp-grid">
@@ -684,7 +713,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
         </div>
       </div>
       <div class="comp-card win rv-r">
-        <div class="comp-h">✨ Con LavaX</div>
+        <div class="comp-h">✨ Con Kalefh</div>
         <div class="comp-list">
           <div class="comp-row"><span class="ico">✓</span> Recojo y entrega gratis</div>
           <div class="comp-row"><span class="ico">✓</span> Listo en 24 horas</div>
@@ -829,7 +858,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   <div class="container">
     <div class="f-grid">
       <div>
-        <div class="f-logo">Lava<span>X</span></div>
+        <div class="f-logo"><img src="assets/logo.png" alt="Lavandería Kalefh" style="height:44px;width:auto;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:.3rem;"></div>
         <p class="f-desc">Lavandería premium en Huanta con recojo a domicilio, entrega en 24 horas y atención personalizada.</p>
         <div class="f-social">
           <a class="f-soc" href="#">📘</a><a class="f-soc" href="#">📷</a>
@@ -844,7 +873,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
         <div class="f-pay"><span>Yape</span><span>Plin</span><span>Efectivo</span></div>
       </div>
     </div>
-    <div class="f-bottom"><span>© 2025 LavaX Lavandería · Huanta, Ayacucho</span><span>Hecho con ❤️ para Huanta</span></div>
+    <div class="f-bottom"><span>© 2025 Lavandería Kalefh · Huanta, Ayacucho</span><span>Hecho con ❤️ para Huanta</span></div>
   </div>
 </footer>
 
@@ -870,7 +899,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   const l = document.getElementById('loader');
   if (l.style.display === 'none') return; // ya fue ocultado al instante arriba
 
-  sessionStorage.setItem('lavax_loader_shown', '1');
+  sessionStorage.setItem('kalefh_loader_shown', '1');
   window.addEventListener('load', () => {
     setTimeout(() => {
       l.style.transition = 'opacity .6s ease';
@@ -999,8 +1028,8 @@ setInterval(()=>testiNav(1),6000);
 // ── WHATSAPP ──
 const WA='51901267943';
 function waOpen(msg){window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg||'Hola, me interesa el servicio de lavandería 🧺')}`);}
-function waPedido(){waOpen('Hola LavaX, quiero hacer un pedido 🧺');}
-function waServicio(s){waOpen(`Hola LavaX, quiero consultar sobre ${s} 🧺`);}
+function waPedido(){waOpen('Hola Kalefh, quiero hacer un pedido 🧺');}
+function waServicio(s){waOpen(`Hola Kalefh, quiero consultar sobre ${s} 🧺`);}
 </script>
 </body>
 </html>
