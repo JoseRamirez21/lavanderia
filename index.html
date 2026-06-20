@@ -196,7 +196,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
 
 .hero-mini-stats{display:flex;gap:2.2rem;flex-wrap:wrap;}
-
+.hms-item{}
 .hms-num{font-family:var(--fd);font-weight:800;font-size:1.7rem;color:var(--negro);display:flex;align-items:baseline;gap:2px;}
 .hms-num sup{font-size:45%;color:var(--lima);}
 .hms-label{font-size:.74rem;color:var(--gris);margin-top:1px;}
@@ -249,6 +249,23 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
   .hp-card3{display:none;}
   .hero-mini-stats{gap:1.4rem;}
 }
+
+/* ── View Transitions ── */
+@view-transition { navigation: auto; }
+::view-transition-old(root){
+  animation: vt-fade-out 0.28s ease forwards;
+}
+::view-transition-new(root){
+  animation: vt-fade-in 0.32s ease forwards;
+}
+@keyframes vt-fade-out{
+  from{opacity:1;transform:translateY(0)}
+  to{opacity:0;transform:translateY(-8px)}
+}
+@keyframes vt-fade-in{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
 </style>
 
   <!-- ═══ FAVICON ═══ -->
@@ -280,6 +297,91 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
   <meta name="author" content="Lavandería Kalefh">
   <meta name="geo.region" content="PE-AYA">
   <meta name="geo.placename" content="Huanta, Ayacucho, Perú">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LaundryService",
+  "@id": "https://lavax.pe/#business",
+  "name": "Lavandería Kalefh",
+  "alternateName": "Kalefh Lavandería Premium",
+  "description": "Lavandería premium en Huanta con recojo a domicilio, lavado profesional y entrega en 24 horas. Más de 1,200 familias confían en nosotros.",
+  "url": "https://lavax.pe",
+  "logo": "https://lavax.pe/assets/logo.png",
+  "image": "https://lavax.pe/assets/og-image.png",
+  "telephone": "+51901267943",
+  "email": "contacto@kalefh.pe",
+  "priceRange": "S/3 - S/80",
+  "currenciesAccepted": "PEN",
+  "paymentAccepted": "Cash, Yape, Plin",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Gervasio Santillana 491",
+    "addressLocality": "Huanta",
+    "addressRegion": "Ayacucho",
+    "postalCode": "05121",
+    "addressCountry": "PE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -12.927,
+    "longitude": -74.246
+  },
+  "hasMap": "https://www.google.com/maps?q=-12.927,-74.246",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Huanta"
+    },
+    {
+      "@type": "City",
+      "name": "Huamanga"
+    }
+  ],
+  "serviceType": [
+    "Lavado y secado",
+    "Planchado profesional",
+    "Lavado a seco",
+    "Recojo a domicilio",
+    "Ropa de cama"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1200",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/lavanderiakalefh",
+    "https://www.instagram.com/lavanderiakalefh"
+  ]
+}
+</script>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 </head>
 <body>
 
@@ -360,7 +462,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 
     <div class="hero-visual ha" style="animation-delay:.3s">
       <div class="hero-photo-stack">
-        <img class="hp-main" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=900&q=85&auto=format&fit=crop" alt="Lavandería">
+        <img loading="lazy" decoding="async" class="hp-main" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=900&q=85&auto=format&fit=crop" alt="Lavandería">
         <div class="hp-card1 float">
           <div class="ic">⚡</div>
           <div><strong>24 horas</strong><span>Entrega garantizada</span></div>
@@ -771,11 +873,11 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
       <h2 class="s-title">Resultados que <span class="lm">hablan solos</span></h2>
     </div>
     <div class="gal-grid stg">
-      <div class="gal-it big"><img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=700&q=80&auto=format&fit=crop" alt="Lavandería"><div class="gal-ov"><span>Lavado profesional</span></div></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=500&q=80&auto=format&fit=crop" alt="Ropa doblada"><div class="gal-ov"><span>Doblado perfecto</span></div></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=500&q=80&auto=format&fit=crop" alt="Planchado"><div class="gal-ov"><span>Planchado experto</span></div></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&q=80&auto=format&fit=crop" alt="Camisas"><div class="gal-ov"><span>Camisas impecables</span></div></div>
-      <div class="gal-it"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&q=80&auto=format&fit=crop" alt="Ropa de cama"><div class="gal-ov"><span>Ropa de cama fresca</span></div></div>
+      <div class="gal-it big"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=700&q=80&auto=format&fit=crop" alt="Lavandería"><div class="gal-ov"><span>Lavado profesional</span></div></div>
+      <div class="gal-it"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=500&q=80&auto=format&fit=crop" alt="Ropa doblada"><div class="gal-ov"><span>Doblado perfecto</span></div></div>
+      <div class="gal-it"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=500&q=80&auto=format&fit=crop" alt="Planchado"><div class="gal-ov"><span>Planchado experto</span></div></div>
+      <div class="gal-it"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&q=80&auto=format&fit=crop" alt="Camisas"><div class="gal-ov"><span>Camisas impecables</span></div></div>
+      <div class="gal-it"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=500&q=80&auto=format&fit=crop" alt="Ropa de cama"><div class="gal-ov"><span>Ropa de cama fresca</span></div></div>
     </div>
   </div>
 </section>
@@ -1031,5 +1133,7 @@ function waOpen(msg){window.open(`https://wa.me/${WA}?text=${encodeURIComponent(
 function waPedido(){waOpen('Hola Kalefh, quiero hacer un pedido 🧺');}
 function waServicio(s){waOpen(`Hola Kalefh, quiero consultar sobre ${s} 🧺`);}
 </script>
+
+<script src="assets/transitions.js" defer></script>
 </body>
 </html>

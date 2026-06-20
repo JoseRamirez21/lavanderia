@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lavandería Kalefh — Premium · Huanta, Ayacucho</title>
-<meta name="description" content="Lavandería premium en Huanta. Recojo gratis, lavado profesional y entrega en 24h. Más de 1,200 familias confían en nosotros.">
+<title>Contacto y Sedes — Lavandería Kalefh · Huanta</title>
+<meta name="description" content="Contáctanos por WhatsApp al 901 267 943 o visita nuestras 3 sedes en Huanta y Huamanga. Te respondemos en minutos.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -189,7 +189,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
 
 .hero-mini-stats{display:flex;gap:2.2rem;flex-wrap:wrap;}
-
+.hms-item{}
 .hms-num{font-family:var(--fd);font-weight:800;font-size:1.7rem;color:var(--negro);display:flex;align-items:baseline;gap:2px;}
 .hms-num sup{font-size:45%;color:var(--lima);}
 .hms-label{font-size:.74rem;color:var(--gris);margin-top:1px;}
@@ -292,7 +292,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .fg-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
 .form-note{font-size:.78rem;color:var(--gris);margin-top:1rem;text-align:center;}
 
-
+.info-side{}
 .info-block{margin-bottom:2.2rem;}
 .info-t{font-size:1.1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem;}
 .info-row{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.1rem;}
@@ -392,33 +392,155 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 @media(max-width:900px){
   #canales,#form-section,#sedes,#mapa-general,#faq,#cta-final{padding:4.5rem 0;}
 }
+
+/* ── View Transitions ── */
+@view-transition { navigation: auto; }
+::view-transition-old(root){
+  animation: vt-fade-out 0.28s ease forwards;
+}
+::view-transition-new(root){
+  animation: vt-fade-in 0.32s ease forwards;
+}
+@keyframes vt-fade-out{
+  from{opacity:1;transform:translateY(0)}
+  to{opacity:0;transform:translateY(-8px)}
+}
+@keyframes vt-fade-in{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
 </style>
-  <!-- ═══ FAVICON ═══ -->
+<!-- ═══ FAVICON ═══ -->
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
   <meta name="theme-color" content="#1A6FD4">
 <!-- ═══ OPEN GRAPH ═══ -->
 <meta property="og:type"        content="website">
-<meta property="og:site_name"   content="LavaX Lavandería">
+<meta property="og:site_name"   content="Lavandería Kalefh">
 <meta property="og:locale"      content="es_PE">
-<meta property="og:title"       content="Contacto y Sedes — LavaX Lavandería · Huanta">
+<meta property="og:title"       content="Contacto — Lavandería Kalefh">
 <meta property="og:description" content="Contáctanos por WhatsApp al 901 267 943 o visita nuestras 3 sedes en Huanta y Huamanga. Te respondemos en minutos.">
 <meta property="og:url"         content="https://lavax.pe/contacto.html">
-<meta property="og:image"       content="https://lavax.pe/assets/og-image.png">
+<meta property="og:image"       content="https://kalefh.pe/assets/og-image.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt"   content="LavaX — Lavandería Premium en Huanta">
+<meta property="og:image:alt"   content="Kalefh — Lavandería Premium en Huanta">
 <!-- ═══ TWITTER CARD ═══ -->
 <meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="Contacto y Sedes — LavaX Lavandería · Huanta">
+<meta name="twitter:title"       content="Contacto — Lavandería Kalefh">
 <meta name="twitter:description" content="Contáctanos por WhatsApp al 901 267 943 o visita nuestras 3 sedes en Huanta y Huamanga. Te respondemos en minutos.">
-<meta name="twitter:image"       content="https://lavax.pe/assets/og-image.png">
+<meta name="twitter:image"       content="https://kalefh.pe/assets/og-image.png">
 <!-- ═══ SEO BASE ═══ -->
 <link rel="canonical" href="https://lavax.pe/contacto.html">
 <meta name="robots" content="index, follow">
-<meta name="author" content="LavaX Lavandería">
+<meta name="author" content="Lavandería Kalefh">
 <meta name="geo.region" content="PE-AYA">
 <meta name="geo.placename" content="Huanta, Ayacucho, Perú">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LaundryService",
+  "@id": "https://lavax.pe/#business",
+  "name": "Lavandería Kalefh",
+  "alternateName": "Kalefh Lavandería Premium",
+  "description": "Lavandería premium en Huanta con recojo a domicilio, lavado profesional y entrega en 24 horas. Más de 1,200 familias confían en nosotros.",
+  "url": "https://lavax.pe",
+  "logo": "https://lavax.pe/assets/logo.png",
+  "image": "https://lavax.pe/assets/og-image.png",
+  "telephone": "+51901267943",
+  "email": "contacto@kalefh.pe",
+  "priceRange": "S/3 - S/80",
+  "currenciesAccepted": "PEN",
+  "paymentAccepted": "Cash, Yape, Plin",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Gervasio Santillana 491",
+    "addressLocality": "Huanta",
+    "addressRegion": "Ayacucho",
+    "postalCode": "05121",
+    "addressCountry": "PE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -12.927,
+    "longitude": -74.246
+  },
+  "hasMap": "https://www.google.com/maps?q=-12.927,-74.246",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Huanta"
+    },
+    {
+      "@type": "City",
+      "name": "Huamanga"
+    }
+  ],
+  "serviceType": [
+    "Lavado y secado",
+    "Planchado profesional",
+    "Lavado a seco",
+    "Recojo a domicilio",
+    "Ropa de cama"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1200",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/lavanderiakalefh",
+    "https://www.instagram.com/lavanderiakalefh"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://lavax.pe/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contacto",
+      "item": "https://lavax.pe/contacto.html"
+    }
+  ]
+}
+</script>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <body>
 
 <div id="scrollbar"></div>
@@ -427,8 +549,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-ic">🧺</div>
-    <span class="nav-logo-tx">Lava<span class="az">X</span></span>
+    <img src="assets/logo.png" alt="Lavandería Kalefh" style="height:38px;width:auto;object-fit:contain;">
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Inicio</a></li>
@@ -487,11 +608,11 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
         <div class="can-desc">¿Prefieres hablar? Llámanos en horario de atención.</div>
         <div class="can-link">901 267 943 →</div>
       </div>
-      <div class="can-card" onclick="window.open('mailto:contacto@lavax.pe')">
+      <div class="can-card" onclick="window.open('mailto:contacto@kalefh.pe')">
         <div class="can-ic">📧</div>
         <div class="can-name">Correo electrónico</div>
         <div class="can-desc">Para consultas formales, cotizaciones de empresas.</div>
-        <div class="can-link">contacto@lavax.pe →</div>
+        <div class="can-link">contacto@kalefh.pe →</div>
       </div>
       <div class="can-card" onclick="document.getElementById('sedes').scrollIntoView({behavior:'smooth'})">
         <div class="can-ic">📍</div>
@@ -516,8 +637,8 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
       <div class="form-box rv-l">
         <form id="contactForm">
           <input type="hidden" name="access_key" value="228291b5-81f6-4126-b2ca-c2d51314d459">
-          <input type="hidden" name="subject" value="Nuevo mensaje desde la web LavaX">
-          <input type="hidden" name="from_name" value="Formulario web LavaX">
+          <input type="hidden" name="subject" value="Nuevo mensaje desde la web Kalefh">
+          <input type="hidden" name="from_name" value="Formulario web Kalefh">
           <div class="fg-row">
             <div class="fg"><label>Nombre completo</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
             <div class="fg"><label>Teléfono</label><input type="tel" name="telefono" placeholder="987 654 321" required></div>
@@ -543,7 +664,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
         <div class="info-block">
           <div class="info-t">📋 Información de contacto</div>
           <div class="info-row"><div class="info-ic">💬</div><div><strong>WhatsApp</strong><span><a href="https://wa.me/51901267943" target="_blank">901 267 943</a></span></div></div>
-          <div class="info-row"><div class="info-ic">📧</div><div><strong>Correo</strong><span><a href="mailto:contacto@lavax.pe">contacto@lavax.pe</a></span></div></div>
+          <div class="info-row"><div class="info-ic">📧</div><div><strong>Correo</strong><span><a href="mailto:contacto@kalefh.pe">contacto@kalefh.pe</a></span></div></div>
           <div class="info-row"><div class="info-ic">📍</div><div><strong>Sede principal</strong><span>Av. Gervasio Santillana 491, Huanta</span></div></div>
         </div>
 
@@ -661,7 +782,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   <div class="container">
     <div class="f-grid">
       <div>
-        <div class="f-logo">Lava<span>X</span></div>
+        <div class="f-logo"><img src="assets/logo.png" alt="Lavandería Kalefh" style="height:44px;width:auto;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:.3rem;"></div>
         <p class="f-desc">Lavandería premium en Huanta con recojo a domicilio, entrega en 24 horas y atención personalizada.</p>
         <div class="f-social">
           <a class="f-soc" href="#">📘</a><a class="f-soc" href="#">📷</a>
@@ -676,7 +797,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
         <div class="f-pay"><span>Yape</span><span>Plin</span><span>Efectivo</span></div>
       </div>
     </div>
-    <div class="f-bottom"><span>© 2025 LavaX Lavandería · Huanta, Ayacucho</span><span>Hecho con ❤️ para Huanta</span></div>
+    <div class="f-bottom"><span>© 2025 Lavandería Kalefh · Huanta, Ayacucho</span><span>Hecho con ❤️ para Huanta</span></div>
   </div>
 </footer>
 
@@ -778,8 +899,10 @@ document.getElementById('contactForm').addEventListener('submit', async function
 // ── WHATSAPP ──
 const WA='51901267943';
 function waOpen(msg){window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg||'Hola, me interesa el servicio de lavandería 🧺')}`);}
-function waPedido(){waOpen('Hola LavaX, quiero hacer un pedido 🧺');}
-function waServicio(s){waOpen(`Hola LavaX, quiero consultar sobre ${s} 🧺`);}
+function waPedido(){waOpen('Hola Kalefh, quiero hacer un pedido 🧺');}
+function waServicio(s){waOpen(`Hola Kalefh, quiero consultar sobre ${s} 🧺`);}
 </script>
+
+<script src="assets/transitions.js" defer></script>
 </body>
 </html>

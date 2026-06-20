@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lavandería Kalefh — Premium · Huanta, Ayacucho</title>
-<meta name="description" content="Lavandería premium en Huanta. Recojo gratis, lavado profesional y entrega en 24h. Más de 1,200 familias confían en nosotros.">
+<title>Nosotros — Lavandería Kalefh · Huanta</title>
+<meta name="description" content="Conoce la historia de Lavandería Kalefh, nuestro equipo y compromiso con Huanta. 5 años cuidando la ropa de tu familia.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -189,7 +189,7 @@ h1,h2,h3,h4{font-family:var(--fd);font-weight:800;line-height:1.05;letter-spacin
 .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem;}
 
 .hero-mini-stats{display:flex;gap:2.2rem;flex-wrap:wrap;}
-
+.hms-item{}
 .hms-num{font-family:var(--fd);font-weight:800;font-size:1.7rem;color:var(--negro);display:flex;align-items:baseline;gap:2px;}
 .hms-num sup{font-size:45%;color:var(--lima);}
 .hms-label{font-size:.74rem;color:var(--gris);margin-top:1px;}
@@ -421,33 +421,155 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 @media(max-width:900px){
   #historia,#timeline,#mvv,#equipo,#instalaciones,#certificaciones,#social,#faq,#cta-final{padding:4.5rem 0;}
 }
+
+/* ── View Transitions ── */
+@view-transition { navigation: auto; }
+::view-transition-old(root){
+  animation: vt-fade-out 0.28s ease forwards;
+}
+::view-transition-new(root){
+  animation: vt-fade-in 0.32s ease forwards;
+}
+@keyframes vt-fade-out{
+  from{opacity:1;transform:translateY(0)}
+  to{opacity:0;transform:translateY(-8px)}
+}
+@keyframes vt-fade-in{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
 </style>
-  <!-- ═══ FAVICON ═══ -->
+<!-- ═══ FAVICON ═══ -->
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
   <meta name="theme-color" content="#1A6FD4">
 <!-- ═══ OPEN GRAPH ═══ -->
 <meta property="og:type"        content="website">
-<meta property="og:site_name"   content="LavaX Lavandería">
+<meta property="og:site_name"   content="Lavandería Kalefh">
 <meta property="og:locale"      content="es_PE">
-<meta property="og:title"       content="Nosotros — LavaX Lavandería · Huanta">
-<meta property="og:description" content="Conoce la historia de LavaX, nuestro equipo, valores y compromiso con Huanta. 5 años cuidando la ropa de tu familia.">
+<meta property="og:title"       content="Nosotros — Lavandería Kalefh">
+<meta property="og:description" content="Conoce la historia de Lavandería Kalefh, nuestro equipo y compromiso con Huanta. 5 años cuidando la ropa de tu familia.">
 <meta property="og:url"         content="https://lavax.pe/nosotros.html">
-<meta property="og:image"       content="https://lavax.pe/assets/og-image.png">
+<meta property="og:image"       content="https://kalefh.pe/assets/og-image.png">
 <meta property="og:image:width"  content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt"   content="LavaX — Lavandería Premium en Huanta">
+<meta property="og:image:alt"   content="Kalefh — Lavandería Premium en Huanta">
 <!-- ═══ TWITTER CARD ═══ -->
 <meta name="twitter:card"        content="summary_large_image">
-<meta name="twitter:title"       content="Nosotros — LavaX Lavandería · Huanta">
-<meta name="twitter:description" content="Conoce la historia de LavaX, nuestro equipo, valores y compromiso con Huanta. 5 años cuidando la ropa de tu familia.">
-<meta name="twitter:image"       content="https://lavax.pe/assets/og-image.png">
+<meta name="twitter:title"       content="Nosotros — Lavandería Kalefh">
+<meta name="twitter:description" content="Conoce la historia de Lavandería Kalefh, nuestro equipo y compromiso con Huanta. 5 años cuidando la ropa de tu familia.">
+<meta name="twitter:image"       content="https://kalefh.pe/assets/og-image.png">
 <!-- ═══ SEO BASE ═══ -->
 <link rel="canonical" href="https://lavax.pe/nosotros.html">
 <meta name="robots" content="index, follow">
-<meta name="author" content="LavaX Lavandería">
+<meta name="author" content="Lavandería Kalefh">
 <meta name="geo.region" content="PE-AYA">
 <meta name="geo.placename" content="Huanta, Ayacucho, Perú">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LaundryService",
+  "@id": "https://lavax.pe/#business",
+  "name": "Lavandería Kalefh",
+  "alternateName": "Kalefh Lavandería Premium",
+  "description": "Lavandería premium en Huanta con recojo a domicilio, lavado profesional y entrega en 24 horas. Más de 1,200 familias confían en nosotros.",
+  "url": "https://lavax.pe",
+  "logo": "https://lavax.pe/assets/logo.png",
+  "image": "https://lavax.pe/assets/og-image.png",
+  "telephone": "+51901267943",
+  "email": "contacto@kalefh.pe",
+  "priceRange": "S/3 - S/80",
+  "currenciesAccepted": "PEN",
+  "paymentAccepted": "Cash, Yape, Plin",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Gervasio Santillana 491",
+    "addressLocality": "Huanta",
+    "addressRegion": "Ayacucho",
+    "postalCode": "05121",
+    "addressCountry": "PE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -12.927,
+    "longitude": -74.246
+  },
+  "hasMap": "https://www.google.com/maps?q=-12.927,-74.246",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Huanta"
+    },
+    {
+      "@type": "City",
+      "name": "Huamanga"
+    }
+  ],
+  "serviceType": [
+    "Lavado y secado",
+    "Planchado profesional",
+    "Lavado a seco",
+    "Recojo a domicilio",
+    "Ropa de cama"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "1200",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "sameAs": [
+    "https://www.facebook.com/lavanderiakalefh",
+    "https://www.instagram.com/lavanderiakalefh"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://lavax.pe/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Nosotros",
+      "item": "https://lavax.pe/nosotros.html"
+    }
+  ]
+}
+</script>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <body>
 
 <div id="scrollbar"></div>
@@ -456,8 +578,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 
 <nav id="navbar">
   <a href="index.html" class="nav-logo">
-    <div class="nav-logo-ic">🧺</div>
-    <span class="nav-logo-tx">Lava<span class="az">X</span></span>
+    <img src="assets/logo.png" alt="Lavandería Kalefh" style="height:38px;width:auto;object-fit:contain;">
   </a>
   <ul class="nav-links">
     <li><a href="index.html">Inicio</a></li>
@@ -504,18 +625,18 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 <section id="historia">
   <div class="container hist-grid">
     <div class="hist-visual rv-l">
-      <img class="hist-img" src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=700&q=85&auto=format&fit=crop" alt="Historia de LavaX">
+      <img loading="lazy" decoding="async" class="hist-img" src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=700&q=85&auto=format&fit=crop" alt="Historia de Kalefh">
       <div class="hist-badge float"><div class="hist-badge-n">2020</div><div class="hist-badge-l">Año de inicio</div></div>
     </div>
     <div class="hist-text rv-r">
       <div class="s-tag">Nuestra historia</div>
       <h2 class="s-title">De un local pequeño a la lavandería de confianza de Huanta</h2>
-      <p class="hist-p">LavaX nació en 2020 con una sola máquina, un local pequeño en el centro de Huanta y una idea simple: la ropa limpia no debería costarte tiempo que no tienes. Empezamos atendiendo a vecinos y conocidos, lavando prenda por prenda con el mismo cuidado que le daríamos a la nuestra.</p>
+      <p class="hist-p">Kalefh nació en 2020 con una sola máquina, un local pequeño en el centro de Huanta y una idea simple: la ropa limpia no debería costarte tiempo que no tienes. Empezamos atendiendo a vecinos y conocidos, lavando prenda por prenda con el mismo cuidado que le daríamos a la nuestra.</p>
       <p class="hist-p">Con el tiempo, la confianza de la comunidad nos permitió crecer. Hoy contamos con maquinaria industrial, un equipo capacitado y tres sedes que atienden Huanta y Huamanga, pero seguimos operando con la misma filosofía del primer día: tratar cada prenda como si fuera de la familia.</p>
       <p class="hist-p">Más de 1,200 familias confían en nosotros cada mes, y ese número sigue creciendo porque entendemos que detrás de cada bolsa de ropa hay una persona ocupada que simplemente necesita una mano de confianza.</p>
       <div class="hist-sign">
         <div class="hist-sign-av">LX</div>
-        <div><strong>Equipo Fundador LavaX</strong><span>Huanta, Ayacucho · Desde 2020</span></div>
+        <div><strong>Equipo Fundador Kalefh</strong><span>Huanta, Ayacucho · Desde 2020</span></div>
       </div>
     </div>
   </div>
@@ -597,19 +718,19 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
     </div>
     <div class="team-grid stg">
       <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop" alt="Fundadora"></div>
-        <div class="team-body"><div class="team-name">[Nombre fundador/a]</div><div class="team-role">Fundadora & Directora</div><div class="team-desc">Lidera la visión de LavaX desde 2020, enfocada en la calidad y el trato cercano con cada cliente.</div></div>
+        <div class="team-photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop" alt="Fundadora"></div>
+        <div class="team-body"><div class="team-name">[Nombre fundador/a]</div><div class="team-role">Fundadora & Directora</div><div class="team-desc">Lidera la visión de Kalefh desde 2020, enfocada en la calidad y el trato cercano con cada cliente.</div></div>
       </div>
       <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop" alt="Jefe de operaciones"></div>
+        <div class="team-photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop" alt="Jefe de operaciones"></div>
         <div class="team-body"><div class="team-name">[Nombre]</div><div class="team-role">Jefe de Operaciones</div><div class="team-desc">Coordina el recojo, procesamiento y entrega para que todo llegue siempre a tiempo.</div></div>
       </div>
       <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop" alt="Especialista en lavado"></div>
+        <div class="team-photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80&auto=format&fit=crop" alt="Especialista en lavado"></div>
         <div class="team-body"><div class="team-name">[Nombre]</div><div class="team-role">Especialista en Lavado a Seco</div><div class="team-desc">Experta en el cuidado de prendas delicadas, trajes y telas especiales.</div></div>
       </div>
       <div class="team-card">
-        <div class="team-photo"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format&fit=crop" alt="Atención al cliente"></div>
+        <div class="team-photo"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80&auto=format&fit=crop" alt="Atención al cliente"></div>
         <div class="team-body"><div class="team-name">[Nombre]</div><div class="team-role">Atención al Cliente</div><div class="team-desc">La primera persona que te atiende por WhatsApp, siempre con una sonrisa.</div></div>
       </div>
     </div>
@@ -632,9 +753,9 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
     </div>
     <div class="rv-r">
       <div class="inst-gallery">
-        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=500&q=80&auto=format&fit=crop" alt="Local">
-        <img src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=500&q=80&auto=format&fit=crop" alt="Planchado">
-        <img src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=500&q=80&auto=format&fit=crop" alt="Doblado">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=500&q=80&auto=format&fit=crop" alt="Local">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521656693074-0ef32e80a5d5?w=500&q=80&auto=format&fit=crop" alt="Planchado">
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1469504512102-900f29606341?w=500&q=80&auto=format&fit=crop" alt="Doblado">
       </div>
     </div>
   </div>
@@ -660,7 +781,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 <section id="social">
   <div class="container soc-grid">
     <div class="rv-l">
-      <img class="soc-img" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=700&q=80&auto=format&fit=crop" alt="Compromiso con Huanta">
+      <img loading="lazy" decoding="async" class="soc-img" src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=700&q=80&auto=format&fit=crop" alt="Compromiso con Huanta">
     </div>
     <div class="rv-r">
       <div class="s-tag" style="justify-content:flex-start">Compromiso con Huanta</div>
@@ -695,7 +816,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
 <!-- ══════════════ CTA FINAL ══════════════ -->
 <section id="cta-final">
   <div class="container cf-in rv">
-    <div class="cf-tag">✦ Únete a la familia LavaX ✦</div>
+    <div class="cf-tag">✦ Únete a la familia Kalefh ✦</div>
     <h2 class="cf-title">Déjanos cuidar<br>tu <span class="az2">ropa hoy</span></h2>
     <p class="cf-desc">Escríbenos y descubre por qué más de 1,200 familias en Huanta ya confían en nosotros.</p>
     <div class="cf-btns">
@@ -711,7 +832,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
   <div class="container">
     <div class="f-grid">
       <div>
-        <div class="f-logo">Lava<span>X</span></div>
+        <div class="f-logo"><img src="assets/logo.png" alt="Lavandería Kalefh" style="height:44px;width:auto;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:.3rem;"></div>
         <p class="f-desc">Lavandería premium en Huanta con recojo a domicilio, entrega en 24 horas y atención personalizada.</p>
         <div class="f-social">
           <a class="f-soc" href="#">📘</a><a class="f-soc" href="#">📷</a>
@@ -726,7 +847,7 @@ footer{background:#070D18;color:rgba(255,255,255,.55);padding:4.5rem 0 0;}
         <div class="f-pay"><span>Yape</span><span>Plin</span><span>Efectivo</span></div>
       </div>
     </div>
-    <div class="f-bottom"><span>© 2025 LavaX Lavandería · Huanta, Ayacucho</span><span>Hecho con ❤️ para Huanta</span></div>
+    <div class="f-bottom"><span>© 2025 Lavandería Kalefh · Huanta, Ayacucho</span><span>Hecho con ❤️ para Huanta</span></div>
   </div>
 </footer>
 
@@ -784,8 +905,10 @@ function toggleFaq(btn){
 // ── WHATSAPP ──
 const WA='51901267943';
 function waOpen(msg){window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg||'Hola, me interesa el servicio de lavandería 🧺')}`);}
-function waPedido(){waOpen('Hola LavaX, quiero hacer un pedido 🧺');}
-function waServicio(s){waOpen(`Hola LavaX, quiero consultar sobre ${s} 🧺`);}
+function waPedido(){waOpen('Hola Kalefh, quiero hacer un pedido 🧺');}
+function waServicio(s){waOpen(`Hola Kalefh, quiero consultar sobre ${s} 🧺`);}
 </script>
+
+<script src="assets/transitions.js" defer></script>
 </body>
 </html>

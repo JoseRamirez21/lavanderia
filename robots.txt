@@ -1,0 +1,9 @@
+# Lavandería Kalefh — robots.txt
+User-agent: *
+Allow: /
+
+# Bloquear archivos que no necesitan indexarse
+Disallow: /assets/favicon*
+
+# Sitemap
+Sitemap: https://lavax.pe/sitemap.xml
